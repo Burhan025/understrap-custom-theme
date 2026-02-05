@@ -1,0 +1,69 @@
+/* Use this file for custom styles.
+ * Custom styles should generally be in there own file (like /components/, /this-site/, etc.)
+ *
+*/
+
+.wrapper-cantec-local-pickup {
+    display: none !important;
+}
+
+.wp-gr .rpi-dot.active {
+    color: $white !important;
+}
+
+// Blog Post Index
+.site-main.bs-posts {
+    article {
+        // height: 42%;
+        // width: auto;
+        img {
+            height: 40%;
+            width: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+        header {
+            height: 20%;
+            width: auto;
+        }
+        header.entry-content {
+            height: 14%;
+            width: auto;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+// Blog Post Instance
+.post-template-default.single.single-post {
+    img {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .byline,
+    time.updated {
+        display: none;
+    }
+}
+
+/*
+ * Curbside Pickup Plugin ("BurhanAftab Curbside Pickup DK")
+ * Hides 'Select a Store' on frontend (cart/checkout)
+*/
+.wrapper-curbside-pickup {
+    display: none !important;
+}
+
+/* Mini-cart
+ *
+*/
+#cart-popup.active {
+    // Maxed-out quanity on mini-cart (RCDC-290)
+    .dk-max-quantity-message {
+        color: $red;
+    }
+}
+
+.hidden {
+	display: none;
+}

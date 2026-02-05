@@ -1,0 +1,58 @@
+/* Bootstrap variables override */
+// Colors override
+$primary: red;
+$secondary: blue;
+$tertiary: purple;
+$success: #31c671;
+$info: #576ff2;
+$warning: #f9cc36;
+$danger: #e04744;
+$light: #faf3eb;
+$dark: #0d0d0b;
+
+$white: #ffffff;
+$gray-100: #faf3eb;
+$gray-200: #efefef;
+$gray-600: #6c6c6c;
+$gray-900: #2c2c2c;
+$black: #0d0d0b;
+
+$color-woo-on-sale: #e04744;
+$card-background: $white;
+
+// Font family override
+$font-family-sans-serif: 'Poppins', sans-serif;
+$ff-default: $font-family-sans-serif;
+
+// Font sizes override
+$h1-font-size: clamp(32px, 3.5556px + 3.7037vw, 48px);
+$h2-font-size: clamp(24px, 2.6667px + 2.7778vw, 36px);
+$h3-font-size: clamp(18px, 7.3333px + 1.3889vw, 24px);
+$input-btn-font-size: clamp(16px, 8.8889px + 0.9259vw, 20px);
+$figure-caption-font-size: clamp(12px, 8.4444px + 0.463vw, 14px);
+
+// Line heights override
+$line-height-base: 1.5;
+$input-btn-line-height: 1.25;
+
+$body-font-size: clamp(14px, 10.4444px + 0.463vw, 16px);
+$btn-line-height: clamp(20px, 12.8889px + 0.9259vw, 24px);
+$body-line-height: clamp(18px, 7.3333px + 1.3889vw, 24px);
+
+// Line heights
+$line-height-h1: clamp(40px, 11.5556px + 3.7037vw, 56px);
+$line-height-h2: clamp(28px, -0.4444px + 3.7037vw, 44px);
+$line-height-h3: clamp(22px, 4.2222px + 2.3148vw, 32px);
+$line-height-caption: clamp(16px, 8.8889px + 0.9259vw, 20px);
+
+// Border radius
+$border-radius: 8px;
+$border-radius-sm: $border-radius * 0.5; // 4px
+$border-radius-lg: $border-radius * 1.5; // 12px
+$border-radius-xl: $border-radius * 2; // 16px
+$border-radius-2xl: $border-radius * 3; // 24px
+
+// Root variables
+:root {
+    --bs-tertiary: #{$tertiary};
+}

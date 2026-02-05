@@ -1,0 +1,72 @@
+.btn,
+.button,
+input[type='submit'] {
+    font-family: $ff-default;
+    font-size: $input-btn-font-size;
+    font-weight: $font-weight-bold;
+    line-height: $btn-line-height;
+    min-height: 48px;
+    margin: 0;
+    background: $primary;
+    color: $white;
+    border: 0;
+    border-radius: $border-radius;
+    padding: 12px;
+    text-transform: uppercase;
+
+    span {
+        line-height: $btn-line-height;
+    }
+
+    &:hover {
+        color: $white;
+        background-color: $dark;
+    }
+}
+
+.btn-primary {
+    color: $white;
+    background-color: $primary;
+
+    &:hover {
+        background: $dark;
+        color: $white;
+    }
+}
+
+.btn-secondary,
+.btn-dark {
+    color: $white;
+    background-color: $dark;
+
+    &:hover {
+        background: $primary;
+        color: $white;
+    }
+}
+
+.btn-white {
+    color: $white;
+    background-color: $primary;
+
+    &:hover {
+        background: $white;
+        color: $dark;
+    }
+}
+
+.btn-green {
+    color: $white;
+    background-color: $dark;
+
+    &:hover {
+        background: $white;
+        color: $dark;
+    }
+}
+
+.bs-add-to-cart-button,
+.single_add_to_cart_button,
+.add_to_cart_button {
+    min-width: auto;
+}

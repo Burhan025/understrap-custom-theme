@@ -1,0 +1,93 @@
+.woocommerce-cart {
+    h1.entry-title {
+        text-align: center;
+        font-size: 40px;
+        margin: 15px 0 45px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            margin: 15px 0 30px;
+        }
+    }
+    table.shop_table {
+        border: none;
+        tr {
+            th,
+            td {
+                vertical-align: top;
+                border: none;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    table.cart img {
+        width: 135px;
+        @media (max-width: 768px) {
+            width: 60px;
+        }
+    }
+
+    .woocommerce-cart-form {
+        .shop_table {
+            thead {
+                td,
+                th {
+                    border-bottom: 1px solid #000;
+                }
+            }
+        }
+        .product-no {
+            font-weight: 700;
+            padding-right: 10px;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    .cart-collaterals .cart_totals {
+        float: none;
+        width: 100%;
+        @media (min-width: 992px) {
+            padding: 0 30px 30px;
+        }
+
+        h2 {
+            font-size: 24px;
+            line-height: 30px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .bs-limit {
+            color: var(--bs-danger);
+            &__container {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .shop_table {
+            td {
+                text-align: right;
+            }
+            th,
+            td {
+                border: none !important;
+                padding-inline: 0 !important;
+            }
+            .order-total {
+                th,
+                td {
+                    border-top: 1px solid #000 !important;
+                }
+            }
+        }
+    }
+
+    .wc-proceed-to-checkout a {
+        width: 100%;
+        display: block;
+    }
+}

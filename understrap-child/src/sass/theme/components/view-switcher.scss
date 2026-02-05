@@ -1,0 +1,40 @@
+.bs-layout-switcher {
+    display: flex;
+    gap: 8px;
+    &__button {
+        cursor: pointer;
+        border: 1px solid #006f45;
+        border-radius: 8px;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg path {
+            fill: #006f45;
+        }
+        &--grid {
+            background-color: #006f45;
+            svg path {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+.bs-layout-list {
+    .bs-layout-switcher__button--grid {
+        background-color: transparent;
+        svg path {
+            fill: #006f45;
+        }
+    }
+
+    .bs-layout-switcher__button--list {
+        background-color: #006f45;
+        svg path {
+            fill: #fff;
+        }
+    }
+}

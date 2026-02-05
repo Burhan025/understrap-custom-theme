@@ -1,0 +1,42 @@
+.quantity {
+    .bs-quantity-wrapper {
+        display: flex;
+        column-gap: 4px;
+        border-radius: 8px;
+        border: 1px solid var(--Base-Black, #0d0d0b);
+        padding: 12px;
+        width: fit-content;
+        * {
+            border: none;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            padding: 0;
+            line-height: 24px;
+        }
+        .qty {
+            outline: none;
+            box-shadow: none;
+            width: 40px;
+            appearance: textfield;
+            border: none;
+            text-align: center;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+        .qty-btn {
+            width: 24px;
+            height: 24px;
+            background: transparent;
+        }
+    }
+
+    .dk-max-quantity-message {
+		color: $red;
+        margin-top: 8px;
+    }
+}

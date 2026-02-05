@@ -1,0 +1,63 @@
+.woocommerce {
+    span.new-badge,
+    span.onsale {
+        left: -0.5rem;
+        top: -0.5rem;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        padding: 0;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        @media (max-width: 768px) {
+            width: 40px;
+            height: 40px;
+            line-height: 16px;
+            font-size: 10px;
+        }
+    }
+
+    /* Product Page Price and Stock */
+    div.product {
+        .stock,
+        p.price,
+        span.price {
+            color: var(--grey, #777);
+        }
+    }
+
+    .bs-add-to-cart-button,
+    .single_add_to_cart_button,
+    .add_to_cart_button {
+        text-transform: uppercase;
+        background-image: url(../images/icon-cart-light.svg);
+        background-repeat: no-repeat;
+        background-position: left 12px center;
+        padding: 12px;
+        padding-left: 36px;
+        border-radius: 8px;
+        background-color: var(--Base-Black, #0d0d0b);
+        color: #fff;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        border: none;
+        transition: all 0.3s;
+        &:hover {
+            background-color: $gray-900;
+        }
+    }
+
+    /* Cart and Checkout Price Styles */
+    #add_payment_method .cart-collaterals .cart_totals .discount td,
+    .woocommerce-cart .cart-collaterals .cart_totals .discount td,
+    .woocommerce-checkout .cart-collaterals .cart_totals .discount td {
+        color: var(--grey, #777);
+    }
+
+    #left-sidebar {
+        margin-bottom: 32px;
+    }
+}
