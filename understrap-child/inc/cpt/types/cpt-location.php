@@ -1,0 +1,37 @@
+<?php
+return [
+  'slug'      => 'locations',
+  'args'      => [
+    'label'               => 'Locations',
+    'labels'              => [
+      'name'                  => 'Locations',
+      'singular_name'         => 'Location',
+      'add_new_item'          => 'Add New Location',
+      'edit_item'             => 'Edit Location',
+      'new_item'              => 'New Location',
+      'view_item'             => 'View Location',
+      'all_items'             => 'All Locations',
+      'search_items'          => 'Search Locations',
+      'not_found'             => 'No Locations found.',
+      'not_found_in_trash'    => 'No Locations found in Trash.',
+    ],
+    'public'               => true,
+    'show_ui'              => true,
+    'show_in_menu'         => true,
+    'menu_position'        => 20,
+    'menu_icon'            => 'dashicons-location',
+    'show_in_nav_menus'    => true,
+    'show_in_admin_bar'    => true,
+    'show_in_rest'         => true,
+    'has_archive'          => true,
+    'rewrite'              => [
+      'slug'       => 'locations',
+      'with_front' => false,
+    ],
+    'query_var'            => true,
+    'can_export'           => true,
+    'exclude_from_search'  => false,
+    'hierarchical'         => false,
+    'supports'             => [ 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields', 'revisions' ],
+  ],
+];
