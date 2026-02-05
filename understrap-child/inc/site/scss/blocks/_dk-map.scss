@@ -1,0 +1,20 @@
+.block_dk_list_maps {
+	@include media-breakpoint-up(md) {
+		padding-left: 1rem;
+	}
+	h2 {
+		text-align: center;
+	}
+
+	.dk-map {
+		overflow: hidden;
+		width: 100%;
+		height: 240px;
+		border-radius: 16px;
+		@include media-breakpoint-up(lg) {
+			height: 646px;
+		}
+		//border: 3px solid $bs-border-color;
+		//border-radius: 16px;
+	}
+}

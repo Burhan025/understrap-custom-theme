@@ -1,0 +1,12 @@
+.page-header {
+	.breadcrumbs {
+		a, span {
+			color: $bs-grey;
+			text-decoration: none;
+		}
+	}
+	.page-title h1 {
+		color: $bs-black;
+		font-size: $bs-h1-font-size;
+	}
+}

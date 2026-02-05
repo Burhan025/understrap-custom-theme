@@ -1,0 +1,57 @@
+.card.card-blog-item {
+
+	// scss-docs-start card-css-vars
+	--#{$prefix}card-spacer-y: 1.5rem;
+	--#{$prefix}card-spacer-x: 1.5rem;
+	--#{$prefix}card-title-spacer-y: 1rzem;
+	--#{$prefix}card-border-width: 1.5px;
+	--#{$prefix}card-box-shadow: none;
+	--#{$prefix}card-inner-border-radius: $border-radius-lg;
+	--#{$prefix}card-cap-padding-y: 1.5rem;
+	--#{$prefix}card-cap-padding-x: 1.5rem;
+	--#{$prefix}card-cap-bg: #{$bs-primary-2};
+	--#{$prefix}card-cap-color: #{$bs-heading-color};
+	--#{$prefix}card-height: #{$card-height};
+	--#{$prefix}card-color: #{$bs-body-color};
+	--#{$prefix}card-bg: #{$bs-primary-2};
+	--#{$prefix}card-img-overlay-padding: #{$card-img-overlay-padding};
+	--#{$prefix}card-group-margin: #{$card-group-margin};
+	// scss-docs-end card-css-vars
+
+
+	& {
+		background-color: $bs-white;
+		background-position-x: 50%;
+		background-position-y: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border: solid 1.5px $bs-dark;
+	}
+	.text-muted {
+		color: $bs-grey;
+	}
+	.card-img-top {
+		border-radius: 12px;
+		&.ratio {
+			--bs-aspect-ratio: 84%;
+		}
+
+	}
+	.card-header {
+		padding-bottom: 0;
+		border-bottom: 0;
+		background-color: transparent;
+	}
+	.card-text {
+		color: $bs-grey;
+	}
+	.card-btn {
+		font-weight: 700;
+		font-size: $bs-h4-font-size;
+		line-height: 1;
+		color: #0C66E4;
+		i {
+			display: none;
+		}
+	}
+}

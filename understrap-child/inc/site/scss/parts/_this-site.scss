@@ -1,0 +1,21 @@
+/*
+* Put site-specific SCSS here.
+*
+*/
+
+header .logo a img {
+    max-width: 126px;
+}
+
+.location-box .card:not(footer .card),
+.post-type-archive-locations .card:not(footer .card) {
+    background-image: url('../../inc/site/images/location-card-bg-wr.png');
+}
+
+// Hide delivery location on 'Cart' page
+p.woocommerce-shipping-destination {
+    display: none !important;
+}
+form.woocommerce-shipping-calculator {
+    display: none !important;
+}

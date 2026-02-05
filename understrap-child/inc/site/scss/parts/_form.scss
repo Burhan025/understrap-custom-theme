@@ -1,0 +1,117 @@
+.select-resize-ghost,
+.select2-container .select2-choice,
+.select2-container .select2-selection,
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+select,
+textarea {
+	@include input();
+}
+
+textarea {
+	min-height: 176px;
+	resize: vertical;
+	background-color: $bs-white;
+	border: 1px solid $bs-border-color;
+
+	&:focus {
+		color: $bs-body-color;
+		background-color: $bs-white;
+	}
+}
+
+.woocommerce {
+	form {
+		.form-row {
+			margin-bottom: 1rem;
+
+			input[type=date],
+			input[type=email],
+			input[type=number],
+			input[type=password],
+			input[type=search],
+			input[type=tel],
+			input[type=text],
+			input[type=url],
+			select,
+			textarea {
+				@include input();
+			}
+
+			textarea {
+				min-height: 120px;
+				resize: vertical;
+			}
+
+			input[type="date"] {
+				line-height: normal;
+				height: 40px;
+
+				&::-webkit-datetime-edit {
+					line-height: 1.2;
+					margin: auto 0;
+				}
+
+				&::-webkit-calendar-picker-indicator {
+
+				}
+			}
+
+			&.input-group {
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+.select2-container .select2-choice > .select2-chosen,
+.select2-container .select2-selection--single .select2-selection__rendered,
+.select2-selection {
+	@include select2();
+}
+
+.select-resize-ghost, .select2-container .select2-choice, .select2-container .select2-selection, select {
+	padding-right: 32px;
+	border-width: 0 0 2px 0;
+	border-color: $bs-border-color;
+	background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+	background-position: right 8px top 50%;
+	background-repeat: no-repeat;
+	border: solid 1px $bs-grey;
+}
+
+.select2-container .select2-selection--single .select2-selection__arrow {
+	display: none;
+}
+
+.select2-dropdown {
+	border-color: $bs-border-color;
+}
+
+.select2-container.select2-container--open {
+	.select2-selection {
+		border-radius: 0;
+	}
+}
+
+.woocommerce-checkout {
+
+	#wc-breadstack-merrco-payfirma-cc-form .wrapper input,
+	#wc-breadstack-merrco-payfirma-cc-form select {
+		@include input();
+	}
+
+	#wc-breadstack-merrco-payfirma-cc-form select {
+		padding-right: 32px;
+		background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+		background-position: right 8px top 50% !important;
+		background-repeat: no-repeat !important;
+		appearance: none !important;
+	}
+}

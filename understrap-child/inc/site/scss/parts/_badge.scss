@@ -1,0 +1,41 @@
+.woocommerce,
+.woocommerce ul.products li.product {
+	span.new-badge,
+	span.onsale {
+		font-size: 10px;
+		font-weight: 700;
+		font-style: normal;
+		line-height: 40px;
+		text-transform: uppercase;
+		position: absolute;
+		z-index: 1;
+		top: 24px;
+		left: 24px;
+		width: 40px;
+		height: 40px;
+		padding: 0 !important;
+		margin: 0;
+		overflow: hidden;
+		border-radius: 50%;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 16px;
+			line-height: 48px;
+			width: 48px;
+			height: 48px;
+		}
+	}
+
+	span.new-badge {
+		//left: 90px;
+		color: $bs-white;
+		//border: solid 1px $bs-secondary;
+		background-color: $bs-warning;
+	}
+
+	span.onsale {
+		color: $bs-white;
+		//border: solid 1px $bs-primary;
+		background-color: $bs-primary-2;
+	}
+}

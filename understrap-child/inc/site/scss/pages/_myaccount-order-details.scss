@@ -1,0 +1,157 @@
+.bs-order-complete-body {
+	display: flex;
+
+	@media (max-width: 767px) {
+		flex-direction: column;
+	}
+
+	.order-complete-title {
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-size: 60px;
+		font-weight: 700;
+		line-height: 72px;
+		color: $bs-dark;
+	}
+	.woocommerce-thankyou-order-received {
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 36px;
+		color: var(--Main-1, #006f45);
+		text-align: center;
+		margin-bottom: 0;
+	}
+	.bs-order-complete-body {
+		display: flex;
+	}
+	.bs-order-payment-details {
+		flex: 1 1 947px;
+		font-size: 16px;
+		line-height: 24px;
+		&__payment-method {
+			//font-weight: bold;
+		}
+		&__order-number {
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 24px;
+		}
+		ul {
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			row-gap: 16px;
+
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				text-transform: none!Important;
+				line-height: 24px!Important;
+				color: $bs-dark;
+				border-right: 0;
+				font-size: $bs-font-size-base;
+
+				strong {
+					font-size: $bs-font-size-base;
+				}
+
+				@media (max-width: 767px) {
+					padding-right: 0;
+					margin-right: 0;
+				}
+
+				&.woocommerce-order-overview__status {
+					strong {
+						text-transform: capitalize;
+					}
+				}
+			}
+
+			@media (max-width: 767px) {
+				margin-bottom: 0;
+			}
+		}
+
+		span.amount {
+			color: $bs-dark;
+			font-size: $bs-font-size-base;
+		}
+
+		@media (max-width: 767px) {
+			flex-basis: fit-content;
+			margin-bottom: 32px;
+		}
+	}
+	.bs-order-order-details {
+		flex: 1 1 667px;
+		padding: 48px;
+		border-radius: 8px;
+		background: $tertiary;
+		color: $bs-dark;
+		.woocommerce-order-details {
+			margin-bottom: 0;
+			&__title {
+				font-size: 20px;
+				line-height: 24px;
+				font-weight: 700;
+				margin-bottom: 32px;
+				color: $bs-dark;
+				text-transform: capitalize;
+			}
+		}
+		table {
+			border: none !important;
+		}
+		th,
+		td {
+			border: none !important;
+			padding: 0 0 8px !important;
+		}
+		a {
+			color: $bs-dark;
+			text-decoration: none;
+			font-size: $bs-font-size-base;
+		}
+		.wc-item-meta {
+			padding: 0;
+			padding-top: 16px;
+			font-size: 12px;
+			line-height: 16px;
+			&-label {
+				font-weight: 400;
+				display: block !important;
+				float: none !important;
+				text-transform: capitalize;
+			}
+		}
+		span.amount {
+			color: $bs-dark;
+		}
+
+		@media (max-width: 767px) {
+			flex-basis: fit-content;
+			padding: 24px;
+		}
+
+		@media (max-width: 567px) {
+			padding: 16px;
+		}
+	}
+
+	a.continue-shopping {
+		font-size: $bs-font-size-base;
+		color: $bs-primary;
+
+		span {
+			color: $bs-primary;
+		}
+
+		&:hover {
+			color: $bs-primary;
+			span {
+				color: $bs-primary;
+			}
+		}
+	}
+}

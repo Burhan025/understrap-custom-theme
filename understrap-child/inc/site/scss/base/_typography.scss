@@ -1,0 +1,135 @@
+z // typography.scss
+//
+// Override Bootstrap Typography with custom variables
+
+html { font-size: 16px; }
+
+// 1. Body
+body {
+	font-family: $bs-body-font-family;
+	font-size: $bs-body-font-size;
+	font-weight: 400;
+	line-height: $bs-body-line-height;
+	color: $bs-body-color;
+}
+
+// 2. Headings
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: $bs-headings-font-family;
+	font-weight: 700;
+	line-height: $bs-heading-line-height;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+h1, .h1 {
+	font-size: $bs-h1-font-size;
+	color: $bs-heading-color;
+	text-transform: uppercase;
+}
+
+h2, .h2 {
+	font-size: $bs-h2-font-size;
+	color: $bs-heading-color;
+	text-transform: uppercase;
+}
+
+h3, .h3 {
+	font-size: $bs-h3-font-size;
+	text-transform: none;
+}
+
+h4, .h4 {
+	font-size: $bs-h4-font-size;
+	text-transform: none;
+}
+
+h5, .h5 {
+	font-size: $bs-h5-font-size;
+	text-transform: none;
+}
+
+h6, .h6 {
+	font-size: $bs-h6-font-size;
+}
+
+// 3. Paragraph
+p {
+	font-size: $bs-body-font-size;
+	line-height: $bs-body-line-height;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+// 4. Small text
+small, .small {
+	font-size: $bs-font-size-sm;
+	font-weight: 400;
+}
+
+// 5. Lead text
+.lead {
+	font-size: $bs-font-size-lg;
+	font-weight: 400;
+	line-height: $bs-body-line-height;
+}
+
+// 6. Other utility text sizes
+.text-sm {
+	font-size: $bs-font-size-sm;
+}
+
+.text-xsm {
+	font-size: $bs-font-size-xsm;
+}
+
+.text-lg {
+	font-size: $bs-font-size-lg;
+}
+
+// 7. Strong/Bold
+strong, b {
+	font-weight: 700;
+}
+
+// Links
+a {
+	color: $bs-link-color;
+
+	&:hover {
+		color: $bs-link-hover-color;
+	}
+}
+
+// Blockquote
+blockquote {
+	font-size: $bs-font-size-lg;
+	font-style: italic;
+	margin: 0 0 1rem;
+}
+
+// Lists
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+// Code / pre
+code, kbd, pre, samp {
+	font-family: var(--bs-font-monospace, monospace);
+	font-size: $bs-font-size-sm;
+}
+
+// Form labels (WooCommerce/Gutenberg)
+label {
+	font-size: $bs-font-size-sm;
+	font-weight: 400;
+	margin-bottom: 0.5rem;
+}
+
+

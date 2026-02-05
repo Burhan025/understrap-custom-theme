@@ -1,0 +1,16 @@
+.page-header.page-header__simple {
+
+	.breadcrumbs {
+
+		& > * {
+			color: $bs-primary-2;
+		}
+	}
+
+	.page-title {
+
+		h1 {
+			color: $dark;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+section.section-hero {
+	//background-color: $bs-primary;
+	//background-position: bottom;
+	//background-image: unset !important;
+	color: $bs-body-color;
+	padding-block: 0;
+	padding-top: 24px;
+	margin-bottom: 16px;
+	@include media-breakpoint-up(lg) {
+		padding-top: 32px;
+	}
+
+	.section-hero-content {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.breadcrumbs {
+		font-size: $bs-body-font-size;
+		line-height: $bs-body-line-height;
+
+		nav,
+		a,
+		& > * {
+			text-decoration: none;
+			color: $bs-grey;
+		}
+	}
+
+	h1 {
+		font-size: $bs-h1-font-size;
+		line-height: $bs-heading-line-height;
+	}
+
+
+
+}

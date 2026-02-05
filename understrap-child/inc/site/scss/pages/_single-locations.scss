@@ -1,0 +1,223 @@
+.single-locations {
+	.page-title {
+		display: none;
+	}
+	a {
+		text-decoration: none;
+	}
+
+	.location-hero {
+		//background-image: url('../../assets/images/bg-hero-mb.jpg') !important;
+		height: fit-content;
+		background-position: center 75%;
+		position: relative;
+		//z-index: -1;
+		top: 0;
+		@include media-breakpoint-up(lg) {
+			height: fit-content;
+			//background: url('../../assets/images/bg-hero.jpg') no-repeat;
+			background-position: center 75%;
+		}
+		.breadcrumbs {
+			color: $bs-grey;
+
+			a, span {
+				color: $bs-grey;
+			}
+		}
+		p {
+			color: $bs-grey;
+		}
+		.btn {
+			position: relative;
+			z-index: 1;
+		}
+
+	}
+	.still-have-question {
+		border-radius: 12px;
+		border: 2px solid $bs-dark;
+		background: $bs-background-bold;
+		.btn {
+			//border: none !important;
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+	.keep-in-touch-dk {
+		background: $pink !important;
+
+		h3 {
+			font-size: $bs-h2-font-size;
+			line-height: $bs-heading-line-height;
+			font-family: $bs-headings-font-family;
+		}
+
+		@include media-breakpoint-up(md) {
+
+		}
+
+		.keep-in-touch-left {
+
+		}
+
+		.keep-in-touch-right {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			@include media-breakpoint-up(md) {
+				text-align: right;
+			}
+			button,
+			.btn {
+				max-width: 253px;
+				@include media-breakpoint-up(xxl) {
+					margin-bottom: 0 !important;
+					max-width: 269px;
+				}
+			}
+		}
+	}
+
+	.delivery {
+		background: $bs-primary;
+	}
+	.why-choose {
+		.wp-block-group .has-text-align-center {
+			@include media-breakpoint-up(md) {
+				h3, p {
+					text-align: start;
+				}
+				p {
+					margin-bottom: 1.5rem;
+				}
+			}
+		}
+		@include media-breakpoint-up(md) {
+			//padding-top: 38%;
+			.wp-block-group-is-layout-flex {
+				align-items: flex-start;
+				h3, p {
+					text-align: start;
+				}
+				p {
+					margin-bottom: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.location-meta {
+		.store-map {
+			iframe {
+				border-radius: $border-radius-xl;
+				//border: solid 3px $bs-dark!important;
+			}
+		}
+
+		.store-info {
+			> h3 {
+				font-family: $bs-headings-font-family;
+				font-weight: 700;
+				text-transform: none;
+
+				@include media-breakpoint-up(xl) {
+					font-size: $bs-h2-font-size;
+					line-height: $bs-heading-line-height;
+				}
+			}
+			> h4 {
+				font-family: $bs-body-font-family;
+			}
+			.lets-talk,
+			.operation-hours {
+				a {
+					color: $bs-dark;
+				}
+				border-radius: 8px;
+				border: 2px solid $bs-dark;
+				background: $bs-background-bold;
+				> h4 {
+					font-family: $bs-body-font-family;
+				}
+			}
+
+		}
+
+		.find-us {
+			> h3 {
+				font-family: $bs-headings-font-family;
+				font-weight: 700;
+				text-transform: none;
+
+				@include media-breakpoint-up(xl) {
+					font-size: $bs-h2-font-size;
+					line-height: $bs-heading-line-height;
+				}
+			}
+
+			> h4 {
+				font-family: $bs-body-font-family;
+			}
+		}
+	}
+
+	#index-wrapper {
+
+		#content {
+			padding-left: 0;
+			padding-right: 0;
+
+		}
+	}
+	.faq-accordion-dk {
+		.accordion .accordion-item {
+			//border-top: 2px solid $bs-dark;
+			.accordion-button {
+				color: $bs-dark;
+				border-radius: 8px;
+				//&::after {
+				//	filter: invert(1);
+				//	background: url('data:image/svg+xml,<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 8.14746H8V14.1475H6V8.14746H0V6.14746H6V0.147461H8V6.14746H14V8.14746Z" fill="white"/></svg>') no-repeat ;
+				//	background-size: contain;
+				//}
+			}
+			.accordion-body {
+				color: $bs-dark;
+			}
+		}
+	}
+
+	.different-location-dk {
+		position: relative;
+
+		&::before {
+			pointer-events: none;
+			content: "";
+			position: absolute;
+			z-index: 2;
+			background: url("../../assets/images/leaf-compressed.png") center left / contain no-repeat;
+			width: 260.01506506902894px;
+			height: 130.0279640522351px;
+			bottom: 77%;
+			left: -11.5rem;
+			transform: rotate(-210deg);
+			@include media-breakpoint-up(md) {
+				bottom: 45%;
+				left: -16%;
+				width: 482.3072962053px;
+				height: 241.1915051571px;
+				transform: rotate(-190deg);
+			}
+		}
+	}
+
+	.product-highlight__carousel {
+		.flickity-page-dots {
+			bottom: -6% !important;
+		}
+	}
+
+}

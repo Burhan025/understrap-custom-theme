@@ -1,0 +1,45 @@
+.bs-layout-switcher {
+	&__button {
+		border: 1px solid $bs-dark;
+		border-radius: $bs-border-radius-sm;
+		background: transparent;
+
+		svg {
+			width: 24px;
+			height: 24px;
+
+			path {
+				fill: $bs-dark;
+			}
+		}
+
+		&--grid {
+			background-color: $bs-dark;
+
+			svg path {
+				fill: $bs-white;
+			}
+		}
+	}
+}
+
+.bs-layout-list {
+	.bs-layout-switcher__button {
+		border-radius: $bs-border-radius-sm;
+
+	}
+	.bs-layout-switcher__button--grid {
+		background: transparent;
+		svg path {
+			fill: $bs-dark;
+		}
+	}
+
+	.bs-layout-switcher__button--list {
+		background-color: $bs-dark;
+
+		svg path {
+			fill: $bs-white;
+		}
+	}
+}

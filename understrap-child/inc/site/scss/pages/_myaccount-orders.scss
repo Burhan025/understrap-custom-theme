@@ -1,0 +1,112 @@
+.woocommerce-orders-table {
+
+    &.woocommerce-MyAccount-orders {
+		border: none!important;
+		border-collapse: collapse!important;
+
+		thead {
+			tr, td {
+				border: none!important;
+			}
+		}
+
+        tr {
+            th, td {
+                font-size: 13px;
+                font-weight: 400;
+                padding-right: 10px;
+                padding-left: 10px;
+                text-transform: capitalize;
+				@media (min-width: 768px) {
+					padding-right: 15px;
+					padding-left: 15px;
+				}
+            }
+
+            th {
+                padding-bottom: 20px;
+                border-bottom: 1px solid $border-color !important;
+				@media (min-width: 768px) {
+					border-bottom: 0.5px solid $border-color !important;
+				}
+				color: $bs-dark;
+
+                &.woocommerce-orders-table__header-order-total {
+                    text-align: center;
+                }
+            }
+
+            td {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                color: $bs-dark;
+                border-bottom: 0;
+
+                &.woocommerce-orders-table__cell-order-number {
+                    a {
+                        font-weight: 700;
+                        text-decoration: underline;
+						color: $bs-dark;
+                    }
+                }
+
+                &.woocommerce-orders-table__cell-order-total {
+                    text-align: center;
+                }
+            }
+
+            &:hover {
+                background: $tertiary;
+                //cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .breadcrumb-account-order {
+        font-size: 16px;
+    }
+    .woocommerce-orders-table {
+        &.woocommerce-MyAccount-orders {
+            tr {
+                th, td {
+                    font-size: 16px;
+                }
+
+                th {
+                    &.woocommerce-orders-table__header-order-total {
+                        text-align: left;
+                    }
+                }
+
+                td {
+                    &.woocommerce-orders-table__cell-order-total {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+.woocommerce-MyAccount-content {
+	.page-numbers {
+		list-style: none;   /* remove bullets */
+		margin: 0;
+		padding: 0;
+		display: flex;      /* optional: make them inline */
+		gap: 6px;           /* optional: spacing between items */
+		justify-content: center;
+
+		li {
+			list-style: none;   /* double safe */
+			span, a {
+				padding: 0 10px;
+			}
+		}
+	}
+}
+

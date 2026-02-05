@@ -1,0 +1,15 @@
+.gm-style {
+	p, span, a {
+		font-family: $bs-body-font-family;
+		text-decoration: none;
+		color: $bs-body-color;
+
+		strong {
+			font-weight: 700;
+		}
+	}
+
+	.wpsl-info-actions .wpsl-directions {
+		display: none;
+	}
+}

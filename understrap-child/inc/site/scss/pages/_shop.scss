@@ -1,0 +1,198 @@
+.woocommerce-shop {
+	body:has(.bs-filter--onsale input:checked)
+	.section-hero-banner
+	.speech-bubble::after {
+		opacity: 1;
+	}
+
+	body:has(.bs-filter--onsale input:checked)
+	.section-hero-banner
+	.speech-bubble::before {
+		opacity: 0;
+	}
+
+	.section-hero-banner {
+		@include down(lg) {
+			display: none;
+		}
+		background: url('../../assets/images/shop-hero-bg.png') no-repeat;
+		height: 256px;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		//margin-top: -1rem;
+		//z-index: -1;
+
+		.speech-bubble {
+			background:  url('../../assets/images/bubble.png') no-repeat center center;
+			position: absolute;
+			left: 52%;
+			top: 10%;
+			width: 276px;
+			height: 181px;
+			background-posittion: contain;
+			&:before {
+				content: attr(data-text-1);
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 80%;
+				text-align: center;
+				font-size: $bs-h3-font-size;
+				font-family: $bs-headings-font-family;
+				font-weight: 700;
+				line-height: 1;
+				color: $bs-dark;
+				transform: translate(-50%, -50%) rotate(4deg);
+				animation: bubbleText 4s infinite;
+				@keyframes bubbleText {
+					0%, 45% {
+						content: attr(data-text-1);
+						opacity: 1;
+					}
+					50%, 95% {
+						content: attr(data-text-2);
+						opacity: 1;
+					}
+				}
+
+			}
+			isolation: isolate;
+			&::after {
+				content: "Specials";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 80%;
+				text-align: center;
+
+				// match font của bubble cũ
+				font-size: $bs-h3-font-size;
+				font-family: $bs-headings-font-family;
+				font-weight: 700;
+				line-height: 1.15;
+
+				// match transform của bubble cũ
+				transform: translate(-50%, -50%) rotate(4deg);
+
+				// tạo 3 dòng bằng text-shadow (trên / giữa / dưới)
+				color: transparent;
+				text-shadow:
+					0 -1.2em #6aa84f,
+					0  0em   #ff3b30,
+					0  1.2em #6aa84f;
+
+				// mặc định ẩn (không onsale)
+				opacity: 0;
+				pointer-events: none;
+				z-index: 2;
+
+				// animation riêng cho onsale
+				animation: specialsBubble 3.5s infinite;
+				@keyframes specialsBubble {
+					0%, 45% {
+						text-shadow:
+							0 -1.2em #6aa84f,
+							0  0em   #ff3b30,
+							0  1.2em #6aa84f;
+					}
+					50%, 95% {
+						text-shadow:
+							0 -1.2em #ff3b30,
+							0  0em   #6aa84f,
+							0  1.2em #ff3b30;
+					}
+				}
+			}
+		}
+
+		.section-hero-content {
+			position: relative;
+			z-index: 0;
+		}
+	}
+	.featured-categories {
+
+		.featured-categories-carousel {
+
+		}
+		.featured-categories-grid {
+			margin-top: 44px;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		padding-bottom: 0;
+	}
+	.wrapper {
+		position: relative;
+		padding-bottom: 25vh;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 50vh;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 197px;
+			background:  url('../../assets/images/bg-shop-btm.png') no-repeat center bottom;
+			background-size: cover;
+			pointer-events: none;
+			z-index: -1;
+
+			@include media-breakpoint-up(lg) {
+				height: 430px;
+				background:  url('../../assets/images/background-bottom-shop.png') no-repeat center bottom;
+			}
+		}
+		.widget-area#left-sidebar {
+
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 18%;
+			}
+		}
+	}
+	.featured-categories-carousel {
+		@include up(xl) {
+
+			margin-top: 4.5rem;
+		}
+		@include up(xxl) {
+			margin-top: 5.5rem;
+		}
+		@include up(3xl) {
+			margin-top: 4.5rem;
+		}
+	}
+}
+.dk-shop-content {
+	&.woocommerce-shop-top-content {
+		padding: 0;
+	}
+
+	&.woocommerce-category-top-content {
+		margin-bottom: 2rem;
+	}
+
+	&.woocommerce-category-bottom-content {
+		margin-top: 2rem;
+	}
+}
+.woocommerce,
+.woocommerce ul.products li.product {
+	span.new-badge, span.onsale {
+		@media (max-width: 768px) {
+			top: 12px;
+			left: 12px;
+		}
+	}
+}
+
+
+.bs-before-shop-loop {
+	margin-bottom: 24px;
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 24px;
+	}
+}

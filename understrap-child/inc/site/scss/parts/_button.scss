@@ -1,0 +1,94 @@
+.btn, .button, input[type=submit],
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button {
+	@include button();
+
+}
+
+button,
+.btn,
+.button {
+	&.disabled,
+	&:disabled,
+	&[disabled] {
+		opacity: 0.5;
+	}
+}
+
+.btn-secondary {
+	@include button;
+}
+/* Remvoe Bootstrap focus ring for all .btn, button */
+.btn:focus,
+.btn:focus-visible {
+	outline: none !important;
+	box-shadow: none !important;
+	border-color: transparent !important;
+}
+
+button:focus,
+button:focus-visible {
+	outline: none !important;
+	box-shadow: none !important;
+	border-color: transparent !important;
+}
+
+body,
+.woocommerce {
+	.bs-add-to-cart-button,
+	.single_add_to_cart_button,
+	.add_to_cart_button {
+		@include button();
+
+		& {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 4px;
+			@include media-breakpoint-up(xxl) {
+				padding: 0 4px;
+			}
+		}
+
+			//&::before {
+		//	content: "";
+		//	display: inline-block;
+		//	width: 27px;
+		//	height: 26px;
+		//	margin-right: 6px;
+		//	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'><path d='M17.2014 13C17.9514 13 18.6114 12.59 18.9514 11.97L22.5314 5.48C22.9014 4.82 22.4214 4 21.6614 4H6.86137L5.92137 2H2.65137V4H4.65137L8.25137 11.59L6.90137 14.03C6.17137 15.37 7.13137 17 8.65137 17H20.6514V15H8.65137L9.75137 13H17.2014ZM7.81137 6H19.9614L17.2014 11H10.1814L7.81137 6ZM8.65137 18C7.55137 18 6.66137 18.9 6.66137 20C6.66137 21.1 7.55137 22 8.65137 22C9.75137 22 10.6514 21.1 10.6514 20C10.6514 18.9 9.75137 18 8.65137 18ZM18.6514 18C17.5514 18 16.6614 18.9 16.6614 20C16.6614 21.1 17.5514 22 18.6514 22C19.7514 22 20.6514 21.1 20.6514 20C20.6514 18.9 19.7514 18 18.6514 18Z' fill='white'/></svg>") no-repeat center;
+		//	background-size: contain;
+		//}
+
+		&.loading {
+			position: relative;
+			pointer-events: none !important;
+			opacity: 1 !important;
+			color: hsla(0, 0%, 100%, .05);
+
+			&:after {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				display: block;
+				width: 16px;
+				height: 16px;
+				margin-top: -8px;
+				margin-left: -8px;
+				content: "";
+				animation: spin .5s linear infinite;
+				border: 2px solid #fff;
+				border-top-color: transparent !important;
+				border-right-color: transparent !important;
+				border-radius: 32px;
+			}
+		}
+
+	}
+}

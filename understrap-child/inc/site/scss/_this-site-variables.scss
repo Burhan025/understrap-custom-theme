@@ -1,0 +1,31 @@
+$primary: #D2B45D;
+$secondary: #daf9ed;
+$tertiary: #e3ffd8;
+$dark: #0d0d0b;
+$white: #ffffff;
+$black: #0d0d0b;
+$notice-bg : #e3ffd8;
+// Example of adding a variable
+$color-woo-on-sale: #e04744;
+
+.bg-light {
+	background-color: $gray-200 !important;
+}
+
+// Override Bootstrap global
+$body-color: $black;
+
+// Font sizes override
+$h1-section-title: clamp(32px, 12px + 2.5vw, 48px);
+$h2-section-title: clamp(24px, 12px + 2.5vw, 36px);
+$h3-section-title: clamp(22px, 3.5556px + 3.7037vw, 24px);
+$h3-location-title: $h3-section-title;
+$h4-section-title: clamp(18px, 3.5556px + 3.7037vw, 20px);
+$h5-section-title: clamp(16px, 3.5556px + 3.7037vw, 18px);
+
+$woo-checkout-h4: clamp(16px, 3.5556px + 3.7037vw, 20px);
+
+// Font weight
+$font-weight-bold: 700;
+
+@import 'base/variables';

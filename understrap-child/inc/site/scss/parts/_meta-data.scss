@@ -1,0 +1,91 @@
+.bs-product-meta-pills {
+	&__list {
+
+	}
+
+	&__item {
+		color: $bs-heading-color;
+		//border: 1px solid $bs-border-color;
+		background: #F1F0F0;
+		border-radius: $bs-border-radius-sm;
+
+		a {
+			text-decoration: none;
+			color: $bs-body-bg-dark;
+
+			&:hover {
+				color: $bs-body-bg-dark;
+			}
+		}
+		&--details__type,
+		&--plant_type, &--species {
+			order: -1;
+			background-image: url('../../assets/images/icon-plant-type-other.svg');
+			background-repeat: no-repeat;
+			background-position: left 8px center;
+			background-size: 16px;
+			padding-left: 30px;
+			background-color: #F1F0F0;
+			color: $bs-grey;
+
+			a {
+				color: $bs-grey;
+
+				&:hover {
+					color: inherit;
+				}
+			}
+		}
+		&-value--sativa, &-sativa-dom {
+			background-image: url('../../assets/images/sativa.svg');
+			background-color: $bs-success;
+			color: $bs-white;
+
+			a {
+				color: $bs-white;
+			}
+		}
+		&-value--indica, &-value--indica-dom {
+			background-image: url('../../assets/images/icon-plant-type-indica.svg');
+			background-color: #7C85C3;
+			color: $bs-white;
+
+			a {
+				color: $bs-white;
+			}
+		}
+
+		&-value--hybrid {
+			background-image: url('../../assets/images/icon-plant-type-hybrid2.svg');
+			background-color: $bs-grey;
+			color: $bs-white;
+
+			a {
+				color: $bs-white;
+			}
+		}
+	}
+}
+
+
+.entry-summary {
+
+	.bs-product-meta-pills {
+		&__list {
+
+		}
+
+		&__item {
+			color: $bs-heading-color;
+			border: none;
+			//background: #F1F0F0;
+			border-radius: $bs-border-radius-sm;
+
+			a {
+				text-decoration: none;
+				color: $bs-heading-color;
+			}
+
+		}
+	}
+}

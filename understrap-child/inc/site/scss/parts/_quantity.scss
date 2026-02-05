@@ -1,0 +1,37 @@
+div.quantity {
+	.bs-quantity-wrapper {
+		align-items: center;
+		padding: 0 6px;
+		border-radius: $bs-border-radius-lg;
+		border: none;
+		@include media-breakpoint-up(lg) {
+			padding: 0 10px;
+		}
+
+		.qty {
+			background-color: transparent;
+			color: $bs-dark;
+			width: 30px;
+			@include media-breakpoint-up(lg) {
+				width: 40px;
+			}
+		}
+	}
+
+	.maxed-out-quantity,
+	.dk-max-quantity-message {
+		margin-top: 4px;
+		font-size: $bs-font-size-xsm;
+		text-align: center;
+		color: $bs-danger;
+		margin-bottom: 0;
+	}
+}
+
+#cart-popup .quantity,
+.woocommerce-cart-form {
+
+	.bs-quantity-wrapper {
+		transform: scale(.85);
+	}
+}

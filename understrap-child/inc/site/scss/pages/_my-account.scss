@@ -1,0 +1,211 @@
+.woocommerce-account {
+	.lost_reset_password {
+		width: fit-content;
+		margin: 0 auto;
+	}
+	.not-logged-in {
+
+		.page-header.page-header__simple {
+			display: none;
+		}
+	}
+	.page-header {
+		padding: 3rem 0;
+		background-image: url('../../assets/images/bg-hero-mb.jpg') !important;
+		// height: 400px;
+		background-position: center 75%;
+		position: relative;
+		//z-index: -1;
+		top: 0;
+		background-size: cover;
+		@include media-breakpoint-up(lg) {
+			// height: 360px;
+			background: url('../../assets/images/bg-hero.jpg') no-repeat;
+			background-position: center 60%;
+			background-size: cover;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 49px;
+			@include media-breakpoint-up(md) {
+				height: 100px;
+			}
+			pointer-events: none;
+			background: linear-gradient(to top, #fff 0, rgb(255 255 255 / 89%) 40%, rgba(255, 255, 255, 0) 100%);
+		}
+	}
+	.col2-set {
+		margin-left: 0;
+		margin-right: 0;
+		gap: 30px;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+
+	.u-column1, .u-column2 {
+		padding: 0;
+		border: 2px solid $bs-primary;
+		border-radius: $border-radius;
+		@media (max-width: 767px) {
+			padding: 0;
+		}
+		@include media-breakpoint-up(md) {
+			width: calc(50% - 15px);
+		}
+
+		h2 {
+			font-family: $bs-headings-font-family;
+			color: $bs-heading-color;
+			padding: 20px;
+		}
+
+		a {
+			text-decoration: none;
+			color: $bs-link-color;
+
+			&:hover {
+				text-decoration: underline;
+				color: $bs-link-hover-color;
+			}
+		}
+
+	}
+
+	.u-column2 {
+		// border-left: 0;
+		@media (max-width: 767px) {
+			//border-top: 0;
+			//border-left: none;
+		}
+	}
+
+	form.login, form.register {
+		border: none;
+		// background-color: $bs-primary-2;
+		text-align: center;
+
+		.woocommerce-form-row, .form-row {
+			text-align: center;
+
+			label {
+				text-align: left;
+			}
+		}
+
+		button.btn {
+			background-color: $bs-primary;
+			min-width: 180px;
+			float: unset;
+
+			&:hover {
+				background-color: $bs-warning;
+			}
+		}
+	}
+
+	.woocommerce-MyAccount-navigation {
+		margin-bottom: 16px;
+	}
+
+	.woocommerce-MyAccount-content {
+
+		table.my_account_orders,
+		table.woocommerce-table--order-details {
+			background-color: $bs-primary-2;
+		}
+
+		.woocommerce-Address {
+			margin-bottom: 1rem;
+			header.woocommerce-Address-title {
+				background-color: $bs-primary-2;
+				padding: 8px 10px;
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+
+				h3 {
+					margin-bottom: 0;
+					line-height: 1;
+				}
+			}
+
+			& > address {
+				padding: 10px;
+				//border: 1px solid $bs-primary-2;
+			}
+
+		}
+		.woocommerce-info {
+			@include media-breakpoint-down(md) {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				.btn.wc-forward {
+					margin-top: 1rem;
+				}
+			}
+
+		}
+		.woocommerce-address-fields {
+			@include media-breakpoint-down(md) {
+				#billing_address_1_field, #billing_address_2_field {
+
+				}
+				.form-row {
+					width: 100%;
+				}
+			}
+
+		}
+	}
+	// Style cho checkbox "Remember me"
+	.woocommerce-form__label {
+		span {
+			font-weight: $font-weight-bold;
+		}
+
+	}
+	.woocommerce-form__label-for-checkbox {
+	display: flex;
+	align-items: center;
+	color: #000;
+	font-weight: 500;
+
+	.woocommerce-form__input-checkbox {
+	  appearance: none;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  width: 18px;
+	  height: 18px;
+	  border: 2px solid #000;
+	  border-radius: 50%;
+	  display: inline-block;
+	  position: relative;
+	  cursor: pointer;
+	  vertical-align: middle;
+	  margin-right: 8px;
+	  transition: all 0.2s ease;
+
+	  &:checked {
+		&::after {
+		  content: '';
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  width: 8px;
+		  height: 8px;
+		  background-color: #000;
+		  border-radius: 50%;
+		  transform: translate(-50%, -50%);
+		}
+	  }
+	}
+  }
+
+}

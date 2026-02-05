@@ -1,0 +1,19 @@
+nav.bs-pagination {
+	@media (max-width: 567px) {
+		.page-numbers__wrapper {
+			gap: 24px;
+		}
+
+		.page-numbers {
+			padding: 0;
+		}
+	}
+
+	.page-numbers {
+		text-decoration: none;
+
+		&.current {
+			border-bottom: 3px solid $bs-dark;
+		}
+	}
+}

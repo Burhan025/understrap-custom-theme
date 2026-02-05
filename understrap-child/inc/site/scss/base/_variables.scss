@@ -1,0 +1,90 @@
+/*
+* Add additional SCSS variables here or add new ones.
+* See also 'src/sass/theme/_child_theme_variables.scss' and
+* 'src/sass/assets/bootstrap5/_variables.scss'
+*/
+
+/* Typography */
+$bs-body-font-family: "Prestige Elite Std", sans-serif;
+$bs-headings-font-family: "Vintage", sans-serif;
+
+$bs-font-size-base: clamp(0.88rem, calc(0.845rem + 0.152vw), 1.125rem);
+$bs-font-size-sm: clamp(0.75rem, calc(0.720rem + 0.152vw), 0.88rem);
+$bs-font-size-xsm: clamp(0.63rem, calc(0.564rem + 0.303vw), 0.88rem);
+$bs-font-size-lg: clamp(1.00rem, calc(0.939rem + 0.303vw), 1.25rem);
+
+$bs-h1-font-size: clamp(2.00rem, calc(1.576rem + 2.121vw), 3.75rem);
+$bs-h2-font-size: clamp(1.75rem, calc(1.447rem + 1.515vw), 3.00rem);
+$bs-h3-font-size: clamp(1.25rem, calc(1.068rem + 0.909vw), 2.00rem);
+$bs-h4-font-size: clamp(1.00rem, calc(0.939rem + 0.303vw), 1.25rem);
+$bs-h5-font-size: clamp(1.00rem, calc(0.970rem + 0.152vw), 1.13rem);
+$bs-h6-font-size: clamp(0.88rem, calc(0.845rem + 0.152vw), 1.00rem);
+
+$bs-body-font-size: $bs-font-size-base;
+$bs-body-line-height: 1.5;
+$bs-heading-line-height: 1.2;
+
+/* Colors */
+$bs-primary: #FEFBE4;
+$bs-primary-2: #FF5000;
+$bs-secondary: #88B838;
+$bs-success: #2ABB7F;
+$bs-info: #0dcaf0;
+$bs-warning: #E69B31;
+$bs-danger: #AE2A19;
+$bs-light: #EDEADD;
+$bs-dark: #0D0D0B;
+$bs-brown: #452D25;
+$bs-green: #567A37;
+$bs-white: #ffffff;
+$bs-grey-light: #F1F0F0;
+$bs-black: #000000;
+$bs-black-grey: #2C2C2C;
+$bs-border-color: #0D0D0B;
+$bs-grey: #9B9A9A;
+$bs-grey-light: #D9D9D9;
+$bs-background: #F9FAE8 ;
+$bs-background-bold: #ECE9A2 ;
+$bs-background-secondary: #D9D557 ;
+
+/* Body */
+$bs-body-bg: #EDEADD;
+$bs-body-bg-dark: #2C2C2C;
+$bs-body-color: #0D0D0B;
+$bs-heading-color: #0D0D0B;
+$bs-link-color: inherit ;
+$bs-link-hover-color: inherit  ;
+
+/* WooCommerce */
+$bs-woo-onsale: #dc3545;
+$bs-woo-new: #0dcaf0;
+
+/* Border radius */
+$bs-border-radius: 0.375rem;
+$bs-border-radius-sm: 0.25rem;
+$bs-border-radius-lg: 0.5rem;
+$bs-border-radius-xl: 1rem;
+$bs-border-radius-xxl: 2rem;
+$bs-border-radius-pill: 50rem;
+
+/* Spacing */
+$bs-spacing-1: 0.25rem;
+$bs-spacing-2: 0.5rem;
+$bs-spacing-3: 1rem;
+$bs-spacing-4: 1.5rem;
+$bs-spacing-5: 3rem;
+
+/* Container */
+$bs-container-max: 1704px;
+$bs-gutter-x: 2rem;
+
+/* Shadows */
+$bs-box-shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
+$bs-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+$bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
+
+/* Transitions */
+$bs-transition-base: all .2s ease-in-out;
+$bs-transition-fade: opacity .15s linear;
+$bs-transition-collapse: height .35s ease;
+

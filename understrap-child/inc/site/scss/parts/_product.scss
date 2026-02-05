@@ -1,0 +1,307 @@
+/* Product Grid Styles */
+
+.woocommerce {
+
+	ul.products {
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 8px;
+		@include media-breakpoint-up(md) {
+			gap: 10px;
+		}
+
+		li.product {
+			display: flex;
+			float: unset;
+			overflow: hidden;
+			flex-direction: column;
+			justify-content: space-between;
+			width: unset;
+			flex: 0 1 calc(50% - 8px);
+			max-width: calc(50% - 8px);
+			min-width: calc(50% - 8px);
+			transition: background .3s;
+			@include media-breakpoint-up(md) {
+				flex-basis: calc(33.33% - 18px);
+				max-width: calc(33.33% - 18px);
+				min-width: calc(33.33% - 18px);
+			}
+
+			&:before,
+			&:after {
+				display: none;
+			}
+
+			a.woocommerce-loop-product__link {
+				position: relative;
+				flex-grow: unset;
+				padding-block: 50%;
+				height: 0;
+
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					margin: 0;
+					transform: none;
+					-o-object-fit: contain;
+					object-fit: contain;
+				}
+			}
+
+			.bs-loop-item-content {
+				display: flex;
+				flex-direction: column;
+				min-width: 0;
+				padding: 16px;
+				gap: 12px;
+				color: $bs-white;
+				@include media-breakpoint-up(xl) {
+					padding: 24px;
+				}
+
+				.bs-loop-item-title__link {
+					text-decoration: none;
+				}
+			}
+			@include media-breakpoint-up(md) {
+				.bs-add-to-cart-wrapper:not(:has(.product-select-swatches__hidden)) .bs-add-to-cart-button {
+					background-position: center;
+				}
+				.bs-add-to-cart-wrapper:not(:has(.product-select-swatches__hidden)).bs-add-to-cart-wrapper:not(:has(.product-select-swatches)) .bs-add-to-cart-button {
+					background-position: left 12px center;
+				}
+			}
+
+		}
+
+		&.columns-5 {
+
+			@include media-breakpoint-up(xl) {
+				gap: 12px;
+			}
+			@include media-breakpoint-up(xxl) {
+				gap: 24px;
+			}
+			@include media-breakpoint-up(xxxl) {
+				gap: 24px;
+			}
+
+			li.product {
+
+				@include media-breakpoint-up(xl) {
+					flex-basis: calc(25% - 20px);
+					max-width: calc(25% - 20px);
+					min-width: calc(25% - 20px);
+				}
+				@include media-breakpoint-up(xxl) {
+					flex-basis: calc(20% - 20px);
+					max-width: calc(20% - 20px);
+					min-width: calc(20% - 20px);
+				}
+				@include media-breakpoint-up(xxxl) {
+					flex-basis: calc(20% - 20px);
+					max-width: calc(20% - 20px);
+					min-width: calc(20% - 20px);
+				}
+
+			}
+		}
+
+		&.columns-4 {
+
+			@include media-breakpoint-up(xl) {
+				gap: 16px;
+			}
+			@include media-breakpoint-up(xxl) {
+				gap: 24px;
+			}
+			@include media-breakpoint-up(xxxl) {
+				gap: 24px;
+			}
+
+			li.product {
+
+				@include media-breakpoint-up(xl) {
+					flex-basis: calc(33.33% - 12px);
+					max-width: calc(33.33% - 12px);
+					min-width: calc(33.33% - 12px);
+				}
+				@include media-breakpoint-up(xxl) {
+					flex-basis: calc(25% - 18px);
+					max-width: calc(25% - 18px);
+					min-width: calc(25% - 18px);
+				}
+				@include media-breakpoint-up(xxxl) {
+					flex-basis: calc(25% - 18px);
+					max-width: calc(25% - 18px);
+					min-width: calc(25% - 18px);
+				}
+
+			}
+		}
+
+		&.columns-3 {
+			gap: 8px;
+			@include media-breakpoint-up(md) {
+				gap: 10px;
+			}
+
+			li.product {
+				flex: 0 1 calc(50% - 8px);
+				max-width: calc(50% - 8px);
+				min-width: calc(50% - 8px);
+				transition: background .3s;
+				@include media-breakpoint-up(md) {
+					flex-basis: calc(33.33% - 18px);
+					max-width: calc(33.33% - 18px);
+					min-width: calc(33.33% - 18px);
+				}
+
+			}
+		}
+
+		&.columns-2 {
+			gap: 8px;
+			@include media-breakpoint-up(md) {
+				gap: 8px;
+			}
+
+			li.product {
+				flex: 0 1 calc(50% - 8px);
+				max-width: calc(50% - 8px);
+				min-width: calc(50% - 8px);
+				transition: background .3s;
+				@include media-breakpoint-up(md) {
+					flex-basis: calc(50% - 8px);
+					max-width: calc(50% - 8px);
+					min-width: calc(50% - 8px);
+				}
+
+			}
+		}
+	}
+
+	&.bs-layout-list {
+
+		ul.products {
+			gap: 20px;
+
+			li.product {
+				flex-basis: 100% !important;
+				max-width: 100% !important;
+
+				&:hover {
+					background-color: $bs-white;
+				}
+
+				a.woocommerce-loop-product__link {
+					padding-block: 0;
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+.woocommerce ul.products li.product,
+.products li.product {
+	border: 3px solid $bs-dark;
+	border-radius: 0;
+	background-color: $bs-white;
+
+	a.woocommerce-loop-product__link {
+		border-radius: 0;
+		background-color: $bs-white;
+	}
+
+	.bs-loop-item-content {
+		flex: 1;
+		background-color: $bs-dark;
+
+		.bs-loop-item-title__link {
+			flex: 1;
+		}
+		.product-brand {
+			color: $bs-grey;
+			font-feature-settings: 'liga' off, 'clig' off;
+			text-overflow: ellipsis;
+			font-family: $bs-body-font-family;
+			font-size: 12px;
+			font-style: normal;
+		}
+		.woocommerce-loop-category__title,
+		.woocommerce-loop-product__title,
+		h3 {
+			font-size: $bs-font-size-base;
+			font-family: $bs-body-font-family;
+			font-weight: 700;
+			line-height: $bs-body-line-height;
+			display: -webkit-box;
+			overflow: hidden;
+			padding: 0;
+			white-space: normal;
+			text-overflow: ellipsis;
+			color: $bs-white;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+
+		}
+
+		.add_to_cart_button {
+			//background-color: $bs-primary;
+		}
+
+		.added_to_cart.wc-forward {
+			display: none;
+		}
+	}
+
+	.bs-add-to-cart-wrapper {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		gap: 12px;
+
+		.add-to-cart-container a,
+		.add_to_cart_button {
+			width: 100%;
+		}
+
+		.add-to-cart-container,
+		.product-select-swatches {
+			flex-grow: 1;
+			min-width: 0;
+		}
+
+		:not(.product-select-swatches__hidden)
+		+ .add-to-cart-container {
+			flex-grow: 0;
+			flex-shrink: 0;
+			a {
+				font-size: 0;
+			}
+		}
+
+		.product-select-swatches {
+			padding: 0 24px 0 7px;
+			border: 1px solid $bs-grey;
+			border-radius: $bs-border-radius-lg;
+			background-color: #fff;
+			background-image: url(../../assets/images/arrow_down.svg);
+			background-repeat: no-repeat;
+			background-position: right 8px top 50%;
+			background-size: auto 8px;
+			appearance: none;
+			--webkit-appearance: none;
+			&:focus {
+				color: $bs-dark;
+			}
+		}
+	}
+
+}

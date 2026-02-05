@@ -1,0 +1,188 @@
+.home {
+	main {
+
+		.wp-block-group {
+			padding: 2rem 0;
+
+		}
+
+
+		h2.wp-block-heading {
+				padding: 0.5rem 0;
+				@include media-breakpoint-up(lg) {
+					padding: 1rem 0;
+				}
+		}
+
+	}
+}
+.home-locations {
+	background-image: url(../../assets/images/locations-mb.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: -1rem;
+	@include up(md) {
+		background-image: url(../../assets/images/locations-pc.png);
+		background-position: bottom center;
+	}
+}
+// ============================
+// Component: Jerry's Why
+// ============================
+.jerrys-why {
+	padding: 1rem 0!important;
+	// ---------- Title ----------
+	background: #D9D557;
+	&__title {
+
+		text-align: center;
+		h2 {
+			margin: 0;
+			color: $bs-white;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			background-color: $bs-brown;
+			font-size: 24px;
+			padding: 8px 16px !important;
+			width: 75%;
+			margin: 0 auto 1.5rem;
+			display: inline-block;
+			transform: rotate(1.8deg);
+			@include up(lg) {
+				font-size: $bs-h2-font-size;
+				width: 80%;
+				transform: rotate(0deg);
+			}
+		}
+	}
+
+	// ---------- Columns ----------
+	&__columns {
+		display: flex;
+		gap: 2.5rem;
+		align-items: flex-start;
+	}
+
+	// ---------- Column ----------
+	&__col {
+		flex: 1;
+
+		h3 {
+			color: $bs-green;
+			font-size: 1rem;
+			margin-bottom: 1rem;
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
+			font-size: $bs-font-size-base;
+			line-height: 1.6;
+			margin-bottom: 0.75rem;
+		}
+		&:nth-child(1),
+		&:nth-child(3) {
+			transform: rotate(-4.18deg);
+		}
+
+		&:nth-child(2) {
+			transform: rotate(2.87deg);
+		}
+		@include up(lg) {
+			&:nth-child(1),
+			&:nth-child(3) {
+				transform: rotate(2.87deg);
+			}
+
+			&:nth-child(2) {
+				transform: rotate(-4.18deg);
+			}
+		}
+	}
+
+	// ============================
+	// Responsive
+	// ============================
+	@include up(md) {
+		padding: 2.5rem 1rem;
+
+		&__title {
+			display: block;
+		}
+
+		&__columns {
+			flex-direction: row;
+			gap: 2rem;
+		}
+	}
+}
+
+.image-carousel-block {
+	.carousel-control-prev .carousel-control-prev-icon {
+		width: 1.5rem;
+		height: 1.5rem;
+		background-image: url('data:image/svg+xml,<svg width="24" height="25" viewBox="0 0 24 25" fill="%23000000" xmlns="http://www.w3.org/2000/svg"><path d="M9 19.2422L10.41 17.8322L5.83 13.2422H22V11.2422H5.83L10.42 6.65219L9 5.24219L2 12.2422L9 19.2422Z" fill="%230D0D0B"/></svg>') !important;
+		filter: none !important;
+	}
+
+	.carousel-control-next .carousel-control-next-icon {
+		width: 1.5rem;
+		height: 1.5rem;
+		background-image: url('data:image/svg+xml,<svg width="24" height="25" viewBox="0 0 24 25" fill="%23000000" xmlns="http://www.w3.org/2000/svg"><path d="M15 5.24219L13.59 6.65219L18.17 11.2422H2V13.2422H18.17L13.58 17.8322L15 19.2422L22 12.2422L15 5.24219Z" fill="%230D0D0B"/></svg>') !important;
+		filter: none !important;
+	}
+
+	.carousel-control-prev {
+
+	}
+
+	.carousel-control-next {
+
+	}
+}
+
+.dk-intro-section {
+	position: relative;
+
+	&::before {
+		pointer-events: none;
+		content: "";
+		position: absolute;
+		z-index: 2;
+		background: url("../../assets/images/leaf-compressed.png") center left / contain no-repeat;
+		width: 260.01506506902894px;
+		height: 130.0279640522351px;
+		bottom: -5%;
+		left: -9.5rem;
+		transform: rotate(-210deg);
+		@include media-breakpoint-up(md) {
+			bottom: -24%;
+			left: -16%;
+			width: 482.3072962053px;
+			height: 241.1915051571px;
+			transform: rotate(-190deg);
+		}
+	}
+
+	&::after {
+		pointer-events: none;
+		content: "";
+		position: absolute;
+		z-index: 2;
+		bottom: 70%;
+		right: -7.5rem;
+		transform: rotate(215deg);
+		background: url("../../assets/images/leaf-1-compressed.png") center left / contain no-repeat;
+		width: 260.01506506902894px;
+		height: 130.0279640522351px;
+		@include media-breakpoint-up(md) {
+			right: -9%;
+			bottom: 75%;
+			width: 482.3072962053px;
+			height: 241.1915051571px;
+			transform: rotate(196deg);
+		}
+		pointer-events: none;
+	}
+}

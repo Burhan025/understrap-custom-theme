@@ -1,0 +1,464 @@
+.bs-filters {
+	font-family: $bs-body-font-family;
+	background: $bs-primary;
+	@include media-breakpoint-up(md) {
+		background: transparent;
+	}
+	border: none;
+	border-radius: 0;
+	padding: 16px;
+	@include down(lg) {
+		border: solid 3px;
+	}
+	//.bs-filter.bs-filter--category {
+	//	.bs-filter__body {
+	//		//overflow: hidden;
+	//		scrollbar-color: transparent transparent;
+	//	}
+	//}
+	.bs-filters__body {
+		display: flex;
+		flex-direction: column;
+		.bs-filter {
+			&__btn-show_more {
+				color: $bs-grey;
+
+				&:after {
+					border-top: 1px solid $bs-grey;
+				}
+			}
+
+			&__body {
+				&-scroll {
+					overflow-y: auto;
+					max-height: 400px;
+				}
+			}
+
+			&__items {
+				//border-bottom: 2px solid $bs-border-color;
+			}
+
+			&__item {
+				padding: 8px;
+				font-size: $bs-font-size-sm;
+				color: $bs-black;
+				border: none;
+				border-bottom: 0;
+				background: $bs-white;
+				@include up(lg) {
+					background: $bs-primary;
+				}
+				border-radius: 0;
+				//display: flex;
+				//align-items: center;
+				//gap: 8px;
+				//
+				//input[type="checkbox"] {
+				//	order: -1;
+				//	//margin-right: 8px;
+				//}
+
+				//span {
+				//	margin-left: 34px;
+				//}
+				&:last-child {
+					//border-bottom: 2px solid $bs-border-color;
+				}
+
+
+
+				&--active,
+				&:hover {
+					background: $bs-body-bg;
+					border-radius: 0;
+				}
+			}
+
+			&__title {
+				font-size: $bs-font-size-base;
+				font-family: $bs-body-font-family;
+				color: $bs-heading-color;
+			}
+
+			&__select {
+				display: block;
+				width: 100%;
+				height: 40px;
+				font-size: $bs-font-size-sm;
+				color: $bs-black;
+				border: none;
+				border-radius: 0;
+				background-color: $bs-white;
+				@include up(lg) {
+					background-color: $bs-primary;
+				}
+				&:focus-visible {
+					outline: none;
+				}
+			}
+
+			&__search-box {
+				width: 100%;
+				height: 40px;
+				padding: 8px;
+				border: none;
+				background-color: $bs-white;
+
+				&:focus-visible {
+					outline: none;
+				}
+			}
+
+			// reorder filter
+			&.bs-filter--onsale {
+				order: 14;
+			}
+
+			&.bs-filter--orderby {
+				order: 3;
+				text-transform: capitalize;
+			}
+
+			&.bs-filter--category {
+				order: 4;
+			}
+
+			&.bs-filter--net_weight {
+				order: 7;
+			}
+
+			&.bs-filter--plant_type {
+				order: 6;
+			}
+
+			&.bs-filter--brand {
+				order: 5;
+			}
+
+			&.bs-filter--terpenes {
+				order: 8;
+			}
+
+			&.bs-filter--package_date,
+			&.bs-filter--sugar_free,
+			&.bs-filter--vegan {
+				order: 9;
+			}
+
+			&.bs-filter--price {
+				order: 10;
+			}
+
+			&.bs-filter--thc {
+				order: 11;
+			}
+
+			&.bs-filter--cbd {
+				order: 12;
+			}
+			&.bs-filter--cbg {
+				order: 13;
+			}
+			&.bs-filter--cbn {
+				order: 14;
+			}
+
+			&--range__values {
+				color: $bs-dark;
+			}
+
+			.irs-single {
+				display: none;
+			}
+			.irs--round {
+				.irs-line {
+					background-color: $bs-dark;
+					opacity: .6;
+				}
+				.irs-handle {
+					background-color: $bs-dark;
+				}
+
+				.irs-bar {
+					background-color: $bs-dark;
+					height: 4px;
+					top: 0;
+				}
+			}
+
+			&__reset {
+				color: $bs-dark;
+				order: 1;
+				margin-bottom: 16px;
+				text-align: left;
+				background-size: 18px;
+			}
+
+		}
+
+		.bs-filter--collapsed .bs-filter__body {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.01s ease;
+			//scrollbar-color: transparent transparent;
+		}
+
+		.bs-filter:not(.bs-filter--collapsed) .bs-filter__body {
+			//max-height: 300px;
+			transition: max-height 0.01s ease;
+		}
+		.bs-filter__body  {
+			//overflow: hidden;
+			scrollbar-color: $bs-primary #f5f5f5;
+
+			.bs-filter__search {
+				.bs-filter__search-box {
+					color: $bs-dark;
+					border-bottom: 1px solid $bs-grey;
+					border-radius: 0;
+				}
+
+				.bs-filter__search-results {
+					max-height: 290px;
+					box-shadow: none;
+				}
+			}
+		}
+		.bs-filter--category {
+
+			.bs-filter__body .bs-filter__items > a:not(:last-child) .bs-filter__item {
+				border-bottom: 0;
+				scrollbar-width: thin;
+				//scrollbar-color: #f5f5f5 #f5f5f5;
+			}
+		}
+		.bs-filter__items {
+			.bs-filter__item {
+				//display: flex;
+				//flex-direction: row-reverse;
+				//gap: 1rem;
+				//justify-content: flex-end;
+				input[type=checkbox] {
+					float: left;
+					margin-right: 0.5rem;
+					display: block;
+					appearance: none;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					width: 18px;
+					height: 18px;
+					border: 2px solid #000;
+					border-radius: 0;
+					background-color: transparent;
+					cursor: pointer;
+					position: relative;
+					transition: all 0.2s ease;
+					&:hover::before {
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						width: 8px;
+						height: 8px;
+						background-color: rgba(0, 0, 0, 0.4);
+						border-radius: 0;
+						transform: translate(-50%, -50%);
+					}
+					&:checked::before {
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						width: 8px;
+						height: 8px;
+						background-color: #000;
+						border-radius: 0;
+						transform: translate(-50%, -50%);
+					}
+				}
+			}
+
+		}
+		.bs-pagination-info {
+			//display: none;
+			order: 15;
+			color: $bs-dark;
+		}
+
+		.filter-close-btn {
+			display: none; /* Hidden by default */
+		}
+
+		.bs-toggle {
+			color: $bs-dark;
+			font-weight: 400;
+
+			&__slider {
+				font-family: $bs-headings-font-family;
+				border-color: $bs-dark;
+				transform: scale(1.2);
+
+				&:before {
+					background-color: $bs-dark;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		body.filters-active & {
+			pointer-events: auto;
+		}
+
+		// Ensure filter body can scroll
+		body.filters-active {
+			overflow: hidden;
+		}
+
+		.bs-filters__body {
+			overflow-y: scroll;
+			height: 100dvh; /* Use dynamic viewport height for mobile */
+			max-height: 100vh; /* Fallback for older browsers */
+		}
+
+		.bs-filters__body {
+			position: fixed;
+			z-index: 9999;
+			top: 0;
+			left: 0;
+			display: none;
+			overflow-x: hidden;
+			overflow-y: auto;
+			width: calc(100% - 100px);
+			height: 100dvh;
+			max-height: 100vh;
+			padding: 40px 20px 80px 20px;
+
+			transition: transform 0.3s cubic-bezier(0.4, 0, 2, 1);
+			border-radius: 0 $bs-border-radius-lg $bs-border-radius-lg 0;
+			background: $bs-primary;
+			-webkit-overflow-scrolling: touch;
+
+			// Scrollbar styling
+			&::-webkit-scrollbar {
+				width: 6px;
+			}
+
+			&::-webkit-scrollbar-track {
+				border-radius: 3px;
+				background: rgba(255, 255, 255, 0.1);
+			}
+
+			&::-webkit-scrollbar-thumb {
+				border-radius: 3px;
+				background: rgba(255, 255, 255, 0.3);
+
+				&:hover {
+					background: rgba(255, 255, 255, 0.5);
+				}
+			}
+
+			.bs-filter {
+				margin-bottom: 16px;
+			}
+
+			.bs-filter:last-child {
+				margin-bottom: 40px;
+			}
+		}
+
+		&--active {
+			.bs-filters__body {
+				display: flex;
+				transform: translateX(0);
+
+				.filter-close-btn {
+					font-size: 40px;
+					position: absolute;
+					z-index: 1000;
+					top: 0;
+					right: 20px;
+					display: flex;
+					cursor: pointer;
+					color: $bs-dark;
+					outline: none !important;
+					background: transparent;
+				}
+			}
+		}
+
+		// Overlay effect
+		&::before {
+			position: fixed;
+			z-index: 9998;
+			top: 0;
+			left: 0;
+			visibility: hidden;
+			width: 100vw;
+			height: 100vh;
+			content: '';
+			transition: all 0.3s ease;
+			opacity: 0;
+			background: rgba(0, 0, 0, 0.7);
+		}
+
+		&--active::before {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.bs-before-shop-loop {
+			flex-direction: row;
+		}
+	}
+
+	&__mobile-only {
+
+		hr {
+			display: none;
+		}
+	}
+
+	&__product-search {
+		display: none;
+	}
+
+	&__toggle {
+		color: $bs-dark;
+
+		.bs-filters__toggle-text {
+			font-family: $bs-headings-font-family;
+			text-transform: capitalize;
+		}
+		.bs-filters__toggle-icon {
+			filter: invert(1);
+		}
+	}
+	.bs-filters__body {
+		.bs-filter__reset {
+			order: 15;
+		}
+		@include media-breakpoint-down(md) {
+			.bs-toggle, .bs-filter__title, .filter-close-btn {
+				color: $bs-dark;
+			}
+			.bs-filter__reset {
+				color: $bs-dark;
+				background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6449 6.35C16.1949 4.9 14.2049 4 11.9949 4C7.57488 4 4.00488 7.58 4.00488 12C4.00488 16.42 7.57488 20 11.9949 20C15.7249 20 18.8349 17.45 19.7249 14H17.6449C16.8249 16.33 14.6049 18 11.9949 18C8.68488 18 5.99488 15.31 5.99488 12C5.99488 8.69 8.68488 6 11.9949 6C13.6549 6 15.1349 6.69 16.2149 7.78L12.9949 11H19.9949V4L17.6449 6.35Z" fill="white"/></svg>');
+			}
+			.bs-toggle__slider {
+				border-color: $bs-dark;
+				&::before {
+					background-color: $bs-dark;
+				}
+			}
+			.bs-filter__btn-show_more {
+				color: $bs-dark;
+				&::after {
+					border-top: 1px solid $bs-dark;
+				}
+			}
+		}
+	}
+}

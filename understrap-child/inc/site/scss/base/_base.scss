@@ -1,0 +1,134 @@
+/* base.scss */
+
+:root {
+	/* Typography */
+	--bs-body-font-family: #{$bs-body-font-family};
+	--bs-headings-font-family: #{$bs-headings-font-family};
+
+	--bs-font-size-base: #{$bs-font-size-base};
+	--bs-font-size-sm: #{$bs-font-size-sm};
+	--bs-font-size-lg: #{$bs-font-size-lg};
+
+	--bs-h1-font-size: #{$bs-h1-font-size};
+	--bs-h2-font-size: #{$bs-h2-font-size};
+	--bs-h3-font-size: #{$bs-h3-font-size};
+	--bs-h4-font-size: #{$bs-h4-font-size};
+	--bs-h5-font-size: #{$bs-h5-font-size};
+	--bs-h6-font-size: #{$bs-h6-font-size};
+
+	--bs-body-font-size: #{$bs-body-font-size};
+	--bs-body-line-height: #{$bs-body-line-height};
+	--bs-heading-line-height: #{$bs-heading-line-height};
+
+	/* Colors */
+	--bs-primary: #{$bs-primary};
+	--bs-secondary: #{$bs-secondary};
+	--bs-success: #{$bs-success};
+	--bs-info: #{$bs-info};
+	--bs-warning: #{$bs-warning};
+	--bs-danger: #{$bs-danger};
+	--bs-light: #{$bs-light};
+	--bs-dark: #{$bs-dark};
+
+	/* Body */
+	--bs-body-bg: #{$bs-body-bg};
+	--bs-body-color: #{$bs-body-color};
+
+	/* Border radius */
+	--bs-border-radius: #{$bs-border-radius};
+	--bs-border-radius-sm: #{$bs-border-radius-sm};
+	--bs-border-radius-lg: #{$bs-border-radius-lg};
+	--bs-border-radius-xl: #{$bs-border-radius-xl};
+	--bs-border-radius-xxl: #{$bs-border-radius-xxl};
+	--bs-border-radius-pill: #{$bs-border-radius-pill};
+
+	/* Spacing */
+	--bs-spacing-1: #{$bs-spacing-1};
+	--bs-spacing-2: #{$bs-spacing-2};
+	--bs-spacing-3: #{$bs-spacing-3};
+	--bs-spacing-4: #{$bs-spacing-4};
+	--bs-spacing-5: #{$bs-spacing-5};
+
+	/* Container */
+	--bs-container-max: #{$bs-container-max};
+	--bs-gutter-x: #{$bs-gutter-x};
+
+	/* Shadows */
+	--bs-box-shadow-sm: #{$bs-box-shadow-sm};
+	--bs-box-shadow: #{$bs-box-shadow};
+	--bs-box-shadow-lg: #{$bs-box-shadow-lg};
+
+	/* Transitions */
+	--bs-transition-base: #{$bs-transition-base};
+	--bs-transition-fade: #{$bs-transition-fade};
+	--bs-transition-collapse: #{$bs-transition-collapse};
+}
+
+/* Container override */
+.container {
+	max-width: 100%;
+	--bs-gutter-x: 2rem;
+	@supports (max-width: var(--bs-container-max)) {
+		max-width: calc( var(--bs-container-max) - var(--bs-gutter-x) * 2 );
+	}
+}
+
+.container {
+	.container {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+body {
+	//background-image: url('../../assets/images/bg-texture.png');
+	background-color: $bs-white;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: multiply, normal;
+	background-attachment: fixed;
+}
+
+ins {
+	text-decoration: none;
+}
+
+// Hide delivery location on 'Cart' page
+p.woocommerce-shipping-destination {
+	display: none !important;
+}
+
+form.woocommerce-shipping-calculator {
+	display: none !important;
+}
+
+.bs-modal {
+	z-index: 1021;
+}
+
+section.section-hero {
+	position: relative;
+}
+
+.fullwidth-wrapper {
+	position: relative;
+	width: 100vw;
+	height: unset;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	max-width: unset;
+
+	img {
+		max-width: unset;
+		width: 100%;
+		height: 100%;
+		-o-object-fit: contain;
+		object-fit: contain;
+	}
+}
+.wrapper {
+	padding-bottom:  0;
+}

@@ -1,0 +1,142 @@
+/* Input */
+@mixin input {
+	font-size: $bs-font-size-base;
+	font-weight: normal;
+	line-height: clamp(1.8rem, 1vw + 1rem, 2.625rem); // ~30–40px
+	padding: 0 0.75rem; // 12px
+	color: $bs-dark;
+	background-color: transparent;
+	box-shadow: none;
+	-webkit-appearance: none;
+	height: clamp(2.5rem, 2vw + 1rem, 3rem); // 40–48px
+	border-radius: 0;
+	border: none;
+	border-bottom: solid 2px $bs-dark;
+	//border-radius: clamp(#{$bs-border-radius-sm}, 1vw, #{$bs-border-radius-lg});
+
+	&:focus, &::placeholder {
+		color: $bs-white;
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	&::placeholder,
+	&::-ms-input-placeholder {
+		color: $bs-white;
+	}
+
+}
+
+/* Select2 */
+@mixin select2 {
+	font-size: $bs-font-size-base;
+	line-height: clamp(1.8rem, 1vw + 1rem, 2.5rem); // ~30–40px
+	padding: 5px 0;
+	color: $bs-body-color;
+	height: clamp(2.5rem, 2vw + 1rem, 3rem); // 40–48px
+	border-radius: 0;
+	//border-radius: clamp(#{$bs-border-radius-sm}, 1vw, #{$bs-border-radius-lg});
+}
+
+/* Button */
+@mixin button {
+	font-family: $bs-body-font-family;
+	font-weight: 700;
+	font-size: $bs-h4-font-size; // 16–20px
+	line-height: clamp(2.25rem, 2vw + 1rem, 3rem); // 40–48px
+	min-height: clamp(2.5rem, 2vw + 1rem, 3rem); // 40–48px
+	margin: 0;
+	padding: 0 clamp(0.75rem, 1vw, 1.875rem); // 12–30px
+	background-color: $bs-primary-2;
+	color: $bs-white;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: $bs-border-radius-lg;
+	border: solid 2px $bs-dark;
+	&:hover {
+		background-color: $bs-brown;
+		color: $bs-primary-2;
+		text-decoration: none;
+	}
+}
+@mixin btn-primary {
+	border: solid 2px $bs-dark;
+	background-color: $bs-primary-2;
+	color: $bs-white;
+	border-radius: 8px;
+	&:hover, &:focus, &:active {
+		background-color: $bs-brown;
+		color: $bs-primary-2;
+		//text-decoration: none;
+	}
+	line-height: 1.5;
+	font-family: 'Prestige Elite Std';
+	text-transform: uppercase;
+}
+.btn {
+	@include btn-primary();
+}
+/* Text line clamp */
+@mixin text-line-clamp($lines: 2) {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $lines;
+	overflow: hidden;
+}
+// Responsive Breakpoints Mixin Override
+$breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+	3xl: 1600px
+);
+
+// Min-width (>=)
+@mixin up($key) {
+	$w: map-get($breakpoints, $key);
+	@if $w == null {
+		@error "Unknown breakpoint: #{$key}";
+	}
+	@media (min-width: $w) {
+		@content;
+	}
+}
+
+// Max-width (<=)
+@mixin down($key) {
+	$w: map-get($breakpoints, $key);
+	@if $w == null {
+		@error "Unknown breakpoint: #{$key}";
+	}
+	// -0.02px để tránh overlap min/max trên một số trình duyệt
+	@media (max-width: ($w - 0.02px)) {
+		@content;
+	}
+}
+
+// Between (min..max)
+@mixin between($from, $to) {
+	$min: map-get($breakpoints, $from);
+	$max: map-get($breakpoints, $to);
+	@if $min == null or $max == null {
+		@error "Unknown breakpoint: #{$from} / #{$to}";
+	}
+	@media (min-width: $min) and (max-width: ($max - 0.02px)) {
+		@content;
+	}
+}
+// Example usage:
+// .example {
+//     @include up(md) {
+//         background-color: blue;
+//     }
+//     @include down(sm) {
+//         background-color: red;
+//     }
+//     @include between(sm, lg) {
+//         background-color: green;
+//     }
+// }

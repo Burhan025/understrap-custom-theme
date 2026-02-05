@@ -1,0 +1,81 @@
+.hear-it-from-our-happy-customers {
+	background : $bs-success;
+	height: 340px;
+	@include media-breakpoint-up(lg) {
+
+	}
+
+}
+.google-reviews-dk {
+	//background-image: url('../../assets/images/bg-gg-reviews.png');
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="375" height="53" viewBox="0 0 375 53" fill="none"><path d="M29.479 0L0 36.3396H375L341.453 0H29.479Z" fill="%23D1B693"/><path d="M375 36.3396H0V53H375V36.3396Z" fill="%23452D25"/></svg>');
+	@include up(md) {
+		background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="172" viewBox="0 0 1920 172" fill="none"><path d="M150.933 0L0 117.932H1920L1748.24 0H150.933Z" fill="%23D1B693"/><path d="M1920 117.932H0V172H1920V117.932Z" fill="%23452D25"/></svg>');
+	}
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+	.btn {
+		margin-bottom: 2rem;
+		border: 2px solid #0d0d0b;
+		border-radius: $bs-border-radius-lg;
+	}
+	.rpi-dot.active {
+		background-color: $bs-dark!important;
+	}
+	.grw-header {
+		display: none;
+	}
+	.grw-content {
+		.grw-reviews {
+			padding-top: 1rem !important;
+			padding-bottom: 1rem !important;
+			@include down(sm) {
+				margin-bottom: -10% !important;
+			}
+			.grw-review {
+				.grw-review-inner {
+					border: 4px $bs-dark solid!important;
+					&.grw-round {
+						border-radius: 0!important;
+					}
+					&.grw-backgnd {
+						background-color: $bs-white !important;
+					}
+				}
+				.wp-gr .grw-review-inner>svg {
+					position: absolute !important;
+					top: 1.5rem !important;
+					right: 16px !important;
+					width: 24px !important;
+					height: 24px !important;
+				}
+
+				.grw-review-inner {
+					transition: transform 0.3s ease;
+				}
+				.wp-google-text {
+					color: $bs-grey!important;
+				}
+				&:nth-child(odd) {
+					.grw-review-inner {
+						transform: rotate(3.562deg);
+					}
+				}
+
+				&:nth-child(even) {
+					.grw-review-inner {
+						transform: rotate(-2.899deg);
+					}
+				}
+			}
+		}
+		.grw-btns {
+			display: none!important;
+		}
+		.rpi-dots-wrap {
+			display: none!important;
+		}
+	}
+
+}

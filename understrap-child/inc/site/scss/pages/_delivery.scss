@@ -1,0 +1,295 @@
+.page-id-134691 {
+	hr {
+		opacity: 1;
+	}
+
+	.dk-intro-section {
+		padding-top: 0 !important;
+		height: 483px;
+
+		&:after {
+			bottom: 75%;
+		}
+
+		&:before {
+
+		}
+
+		@include media-breakpoint-down(md) {
+			overflow-x: hidden;
+		}
+	}
+}
+.same-day {
+	gap: 1.5rem;
+	@include media-breakpoint-up(md) {
+		gap: 2rem;
+	}
+	.delivery-box {
+		width: 100%;
+		max-width: 1086px;
+		@include media-breakpoint-up(md) {
+			width: 80%;
+		}
+		border: solid 1px $bs-primary;
+		border-radius: 16px;
+
+		strong {
+			img {
+				height: 3rem;
+			}
+		}
+	}
+
+	.btn {
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			max-width: 300px;
+		}
+
+	}
+
+	.deli-info-text {
+		gap: 1rem;
+		@include media-breakpoint-up(lg) {
+			gap: 3rem;
+		}
+	}
+
+	.hour {
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			width: 50%;
+		}
+	}
+}
+
+.weed-deli-banner {
+	img {
+		width: 100%;
+	}
+}
+
+.WEED-DELIVERY {
+	position: relative;
+
+	.wp-block-group__inner-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.dk-banner {
+		position: relative;
+		display: flex;
+		justify-content: center;
+
+		.banner-overlay {
+			position: absolute;
+			top: 5%;
+			@include media-breakpoint-up(lg) {
+				top: 20%;
+			}
+		}
+
+		.banner-content {
+			@include media-breakpoint-up(md) {
+				max-width: 60%;
+			}
+
+			.banner-title {
+				color: #A67924;
+				text-align: center;
+				font-size: $bs-h2-font-size;
+				@include media-breakpoint-up(lg) {
+					text-align: start;
+				}
+				@include media-breakpoint-down(md) {
+					font-size: 24px;
+				}
+			}
+
+			.banner-text {
+				color: #6C6C6C;
+				font-size: $bs-body-font-size;
+			}
+		}
+
+		img {
+			min-height: 380px;
+			@include media-breakpoint-up(lg) {
+				height: 480px;
+			}
+		}
+	}
+
+	.text-row {
+		position: absolute;
+		bottom: 3%;
+		gap: 0;
+		color: $bs-white;
+
+		p, strong {
+			font-size: 8px;
+			@include media-breakpoint-up(md) {
+				font-size: 14px;
+			}
+			@include media-breakpoint-up(xxl) {
+				font-size: 20px;
+			}
+		}
+
+		h2 {
+
+		}
+
+		@include media-breakpoint-up(md) {
+			bottom: 5%;
+
+		}
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
+.city-town-serve {
+	.faq-accordion-dk {
+		@include media-breakpoint-up(md) {
+			display: none !important;
+		}
+		width: 100%;
+
+		.accordion-item {
+			border-top: none;
+
+			.accordion-header {
+				width: 60%;
+				margin: 0 auto;
+
+				.accordion-button {
+					font-family: Raleway, sans-serif;
+
+					&:hover {
+						background: $bs-primary;
+						color: $bs-dark;
+					}
+
+					&[aria-expanded="true"] {
+						background: $bs-primary;
+						color: $bs-dark;
+					}
+
+					&[aria-expanded="false"] {
+						background: transparent;
+						color: $bs-dark;
+					}
+				}
+			}
+
+			.accordion-body {
+				padding: 1rem 0;
+				border: solid 2px $bs-primary;
+				background: $bs-background;
+				color: $bs-dark;
+
+				ul {
+					flex-wrap: wrap;
+					display: flex !important;
+					gap: 1rem;
+
+					li {
+						flex: 1 1 45%;
+						@include media-breakpoint-up(md) {
+							flex: 1 1 24%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.block_dk_tabs_content {
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+	}
+
+	.bg-hover {
+		width: 240px;
+		height: 240px;
+		border-radius: 16px;
+		overflow: hidden;
+		position: relative;
+		cursor: pointer;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		color: white;
+		font-weight: 600;
+		transition: opacity 0.3s ease, background-image 0.3s ease;
+
+		// Background ban đầu = gradient + ảnh mây
+		background-image: linear-gradient(178.94deg, rgba(137, 177, 200, 0.2) 10.71%, #538EB0 97.68%),
+		url(../../assets/images/bg-city-serve.png);
+		background-size: cover;
+		background-position: center;
+
+		// Logo chèn bằng pseudo-element (ẩn lúc đầu)
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 3;
+			opacity: 0;
+			background-image: url(../../assets/images/logo-deli.png);
+			background-size: 70%;
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: opacity 0.4s ease;
+		}
+
+		&::before {
+			content: "ONTARIO";
+			position: absolute;
+			bottom: 30%;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 16px; /* mobile */
+			font-weight: 400;
+			color: white;
+			pointer-events: none;
+			z-index: 5;
+			font-family: Raleway;
+			font-weight: bold;
+		}
+
+		// Hover
+		&:hover {
+			background-image: url(../../assets/images/bg-city-serve.png);
+			color: transparent;
+
+			&::after {
+				opacity: 1;
+			}
+
+			&::before {
+				color: transparent;
+			}
+		}
+
+		// Breakpoint md
+		@media (min-width: 768px) {
+			width: 296px;
+			height: 296px;
+		}
+	}
+
+	.wp-block-separator {
+		width: 70%;
+	}
+
+}

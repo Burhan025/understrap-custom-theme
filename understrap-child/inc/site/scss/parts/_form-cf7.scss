@@ -1,0 +1,69 @@
+.form-control,
+.wpcf7 .wpcf7-validation-errors,
+.wpcf7 input[type=color],
+.wpcf7 input[type=date],
+.wpcf7 input[type=datetime-local],
+.wpcf7 input[type=datetime],
+.wpcf7 input[type=email],
+.wpcf7 input[type=file],
+.wpcf7 input[type=month],
+.wpcf7 input[type=number],
+.wpcf7 input[type=range],
+.wpcf7 input[type=search],
+.wpcf7 input[type=submit],
+.wpcf7 input[type=tel],
+.wpcf7 input[type=text],
+.wpcf7 input[type=time],
+.wpcf7 input[type=url],
+.wpcf7 input[type=week],
+.wpcf7 select,
+.wpcf7 textarea {
+	@include input();
+}
+
+.wpcf7 textarea {
+	min-height: 120px;
+	resize: vertical;
+	background-color: $bs-white;
+	//border: 1px solid $bs-primary;
+
+	&:focus {
+		color: $bs-dark;
+		background-color: $bs-white;
+	}
+}
+
+.wpcf7 {
+	max-width: unset;
+}
+
+.wpcf7 input[type=submit] {
+	width: auto;
+	min-width: 180px;
+	@include button();
+}
+
+.wpcf7-checkbox {
+
+	.wpcf7-list-item {
+
+		& > label {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.wpcf7-spinner, .wpcf7-response-output {
+	//display: none;
+	border: none;
+	color: $bs-danger;
+}
+
+.wpcf7 .wpcf7-not-valid-tip {
+	color: $bs-danger;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+	background-color: $bs-primary;
+	color: $bs-white;
+}
