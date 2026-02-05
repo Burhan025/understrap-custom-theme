@@ -1,0 +1,52 @@
+{
+  "key": "group_keep_in_touch_dk",
+  "title": "Block: Keep in Touch DK",
+  "fields": [
+    {
+      "key": "field_keep_in_touch_dk__headline1",
+      "label": "Headline Line 1",
+      "name": "keep_in_touch_dk__headline1",
+      "type": "text",
+      "instructions": "First line of the headline.",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" }
+    },
+    {
+      "key": "field_keep_in_touch_dk__headline2",
+      "label": "Headline Line 2",
+      "name": "keep_in_touch_dk__headline2",
+      "type": "text",
+      "instructions": "Second line of the headline.",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" }
+    },
+    {
+      "key": "field_keep_in_touch_dk__button1",
+      "label": "Button 1",
+      "name": "keep_in_touch_dk__button1",
+      "type": "link",
+      "instructions": "Text, URL & target for the first button.",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" }
+    },
+    {
+      "key": "field_keep_in_touch_dk__button2",
+      "label": "Button 2",
+      "name": "keep_in_touch_dk__button2",
+      "type": "link",
+      "instructions": "Text, URL & target for the second button.",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" }
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/keep-in-touch-dk"
+      }
+    ]
+  ],
+  "active": true
+}

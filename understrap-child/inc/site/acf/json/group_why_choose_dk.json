@@ -1,0 +1,79 @@
+{
+  "key": "group_why_choose_dk",
+  "title": "Block: Why Choose DK",
+  "fields": [
+    {
+      "key": "field_block_why_choose_dk__bg_image",
+      "label": "Background Image",
+      "name": "block_why_choose_dk__bg_image",
+      "type": "image",
+      "return_format": "array"
+    },
+    {
+      "key": "field_block_why_choose_dk__main_image",
+      "label": "Main Image",
+      "name": "block_why_choose_dk__main_image",
+      "type": "image",
+      "return_format": "array"
+    },
+    {
+      "key": "field_block_why_choose_dk__headline",
+      "label": "Headline",
+      "name": "block_why_choose_dk__headline",
+      "type": "text"
+    },
+    {
+      "key": "field_block_why_choose_dk__lead_text",
+      "label": "Lead Text",
+      "name": "block_why_choose_dk__lead_text",
+      "type": "textarea",
+      "new_lines": "wpautop"
+    },
+    {
+      "key": "field_block_why_choose_dk__items",
+      "label": "Items",
+      "name": "block_why_choose_dk__items",
+      "type": "repeater",
+      "layout": "block",
+      "button_label": "Add Item",
+      "sub_fields": [
+        {
+          "key": "field_block_why_choose_dk__item_heading",
+          "label": "Item Heading",
+          "name": "block_why_choose_dk__item_heading",
+          "type": "text"
+        },
+        {
+          "key": "field_block_why_choose_dk__item_body",
+          "label": "Item Body",
+          "name": "block_why_choose_dk__item_body",
+          "type": "textarea",
+          "new_lines": "wpautop"
+        }
+      ]
+    },
+    {
+      "key": "field_block_why_choose_dk__bottom_text",
+      "label": "Bottom Text",
+      "name": "block_why_choose_dk__bottom_text",
+      "type": "textarea",
+      "new_lines": "wpautop"
+    },
+		{
+		"key": "field_block_why_choose_dk__button_link",
+		"label": "Button",
+		"name": "block_why_choose_dk__button_link",
+		"type": "link"
+	  }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/why-choose-dk"
+      }
+    ]
+  ],
+  "active": true
+}

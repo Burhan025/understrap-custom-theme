@@ -1,0 +1,66 @@
+{
+  "key": "group_visit_dispensary_dk",
+  "title": "Block: Visit Our Dispensary DK",
+  "fields": [
+    {
+      "key": "field_visit_dispensary_dk__headline",
+      "label": "Headline",
+      "name": "block_visit_dispensary_dk__headline",
+      "type": "text",
+      "instructions": "Main section title",
+      "required": 0
+    },
+    {
+      "key": "field_visit_dispensary_dk__features",
+      "label": "Features",
+      "name": "block_visit_dispensary_dk__features",
+      "type": "repeater",
+      "instructions": "Add up to three feature blocks.",
+      "layout": "block",
+      "button_label": "Add Feature",
+      "sub_fields": [
+        {
+          "key": "field_visit_dispensary_dk__feature_title",
+          "label": "Title",
+          "name": "title",
+          "type": "text",
+          "required": 1
+        },
+        {
+          "key": "field_visit_dispensary_dk__feature_desc",
+          "label": "Description",
+          "name": "description",
+          "type": "textarea",
+          "new_lines": "wpautop",
+          "required": 1
+        }
+      ]
+    },
+    {
+      "key": "field_visit_dispensary_dk__button1",
+      "label": "Button 1",
+      "name": "block_visit_dispensary_dk__button1",
+      "type": "link",
+      "instructions": "First CTA (outline style).",
+      "required": 0
+    },
+    {
+      "key": "field_visit_dispensary_dk__button2",
+      "label": "Button 2",
+      "name": "block_visit_dispensary_dk__button2",
+      "type": "link",
+      "instructions": "Second CTA (solid style).",
+      "required": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/visit-dispensary-dk"
+      }
+    ]
+  ],
+  "active": true
+}

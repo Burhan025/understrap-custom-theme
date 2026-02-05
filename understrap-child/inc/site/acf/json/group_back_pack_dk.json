@@ -1,0 +1,67 @@
+{
+  "key": "group_back_pack_dk",
+  "title": "Block: Back Pack DK",
+  "fields": [
+    {
+      "key": "field_block_back_pack_dk__bg_image",
+      "label": "Background Image",
+      "name": "block_back_pack_dk__bg_image",
+      "type": "image",
+      "return_format": "array",
+      "instructions": "Left‐side background"
+    },
+    {
+      "key": "field_block_back_pack_dk__headline",
+      "label": "Headline",
+      "name": "block_back_pack_dk__headline",
+      "type": "text",
+      "instructions": "Section title"
+    },
+    {
+      "key": "field_block_back_pack_dk__text1",
+      "label": "Text Top",
+      "name": "block_back_pack_dk__text1",
+      "type": "wysiwyg",
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 0,
+      "delay": 0,
+      "instructions": "Rich text above the button"
+    },
+    {
+      "key": "field_block_back_pack_dk__button_link",
+      "label": "Button",
+      "name": "block_back_pack_dk__button_link",
+      "type": "link",
+      "instructions": "CTA text, URL & target"
+    },
+		{
+		"key": "field_block_back_pack_dk__text2_title",
+		"label": "Text Bottom Title",
+		"name": "block_back_pack_dk__text2_title",
+		"type": "text",
+		"required": 0
+		},
+    {
+      "key": "field_block_back_pack_dk__text2",
+      "label": "Text Bottom",
+      "name": "block_back_pack_dk__text2",
+      "type": "wysiwyg",
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 0,
+      "delay": 0,
+      "instructions": "Rich text below the button"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/back-pack-dk"
+      }
+    ]
+  ],
+  "active": true
+}

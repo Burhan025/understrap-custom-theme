@@ -1,0 +1,63 @@
+{
+	"key": "group_5f9g2c7e1a2b3",
+	"title": "Simple Image & Text",
+	"fields": [
+	  {
+		"key": "field_5f9g2c8b1a2b4",
+		"label": "Image Alignment",
+		"name": "image_alignment",
+		"type": "radio",
+		"choices": {
+		  "left": "Left",
+		  "right": "Right"
+		},
+		"default_value": "left",
+		"layout": "horizontal"
+	  },
+	  {
+		"key": "field_5f9g2c9c1a2b5",
+		"label": "Image",
+		"name": "image",
+		"type": "image",
+		"return_format": "array",
+		"preview_size": "medium"
+	  },
+	  {
+		"key": "field_5f9g2cac1a2b6",
+		"label": "Headline",
+		"name": "headline",
+		"type": "text"
+	  },
+	  {
+		"key": "field_5f9g2cbd1a2b7",
+		"label": "Text",
+		"name": "text",
+		"type": "textarea",
+		"new_lines": "wpautop"
+	  },
+	  {
+		"key": "field_5f9g2cce1a2b8",
+		"label": "Shade Background",
+		"name": "shade_background",
+		"type": "true_false",
+		"ui": 1
+	  }
+	],
+	"location": [
+	  [
+		{
+		  "param": "block",
+		  "operator": "==",
+		  "value": "acf/simple-image-text"
+		}
+	  ]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": ""
+  }

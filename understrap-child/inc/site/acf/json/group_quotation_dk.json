@@ -1,0 +1,47 @@
+{
+  "key": "group_quotation_dk",
+  "title": "Block: Quotation DK",
+  "fields": [
+    {
+      "key": "field_block_quotation_dk__quotes",
+      "label": "Quotes",
+      "name": "block_quotation_dk__quotes",
+      "type": "repeater",
+      "instructions": "Add each quotation and author name.",
+      "required": 0,
+      "layout": "block",
+      "button_label": "Add Quote",
+      "sub_fields": [
+        {
+          "key": "field_block_quotation_dk__quotation",
+          "label": "Quotation",
+          "name": "block_quotation_dk__quotation",
+          "type": "textarea",
+          "instructions": "The text of the quotation",
+          "required": 1,
+          "new_lines": "none",
+          "maxlength": ""
+        },
+        {
+          "key": "field_block_quotation_dk__name",
+          "label": "Name",
+          "name": "block_quotation_dk__name",
+          "type": "text",
+          "instructions": "Author’s name.",
+          "required": 1,
+          "maxlength": ""
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/quotation-dk"
+      }
+    ]
+  ],
+  "active": true
+}

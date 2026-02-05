@@ -1,0 +1,140 @@
+{
+	"key": "group_image_cta_dk",
+	"title": "Image CTA DK",
+	"fields": [
+	  {
+		"key": "field_layout_style",
+		"label": "Style",
+		"name": "layout_style",
+		"type": "select",
+		"choices": {
+		  "style_1": "Home Hero CTA",
+		  "style_2": "Three Images CTA"
+		},
+		"default_value": "style_1"
+	  },
+	  {
+		"key": "field_bg_desktop",
+		"label": "Background Image (Desktop)",
+		"name": "bg_image_desktop",
+		"type": "image",
+		"return_format": "array"
+	  },
+	  {
+		"key": "field_bg_mobile",
+		"label": "Background Image (Mobile)",
+		"name": "bg_image_mobile",
+		"type": "image",
+		"return_format": "array",
+		"conditional_logic": [
+		  [
+			{
+			  "field": "field_layout_style",
+			  "operator": "==",
+			  "value": "style_1"
+			}
+		  ]
+		]
+	  },
+	  {
+		"key": "field_title",
+		"label": "Title",
+		"name": "title",
+		"type": "text"
+	  },
+	  {
+		"key": "field_subtitle",
+		"label": "Subtitle",
+		"name": "subtitle",
+		"type": "text",
+		"conditional_logic": [
+		  [
+			{
+			  "field": "field_layout_style",
+			  "operator": "==",
+			  "value": "style_1"
+			}
+		  ]
+		]
+	  },
+	  {
+		"key": "field_content",
+		"label": "Content",
+		"name": "content",
+		"type": "textarea",
+		"conditional_logic": [
+		  [
+			{
+			  "field": "field_layout_style",
+			  "operator": "==",
+			  "value": "style_2"
+			}
+		  ]
+		]
+	  },
+	  {
+		"key": "field_btn_link",
+		"label": "Button",
+		"name": "button_link",
+		"type": "link"
+	  },
+	  {
+		"key": "field_img_1",
+		"label": "Image 1",
+		"name": "col_img_1",
+		"type": "image",
+		"return_format": "array",
+		"conditional_logic": [
+		  [
+			{
+			  "field": "field_layout_style",
+			  "operator": "==",
+			  "value": "style_2"
+			}
+		  ]
+		]
+	  },
+	  {
+		"key": "field_img_2",
+		"label": "Image 2",
+		"name": "col_img_2",
+		"type": "image",
+		"return_format": "array",
+		"conditional_logic": [
+		  [
+			{
+			  "field": "field_layout_style",
+			  "operator": "==",
+			  "value": "style_2"
+			}
+		  ]
+		]
+	  },
+	  {
+		"key": "field_img_3",
+		"label": "Image 3",
+		"name": "col_img_3",
+		"type": "image",
+		"return_format": "array",
+		"conditional_logic": [
+		  [
+			{
+			  "field": "field_layout_style",
+			  "operator": "==",
+			  "value": "style_2"
+			}
+		  ]
+		]
+	  }
+	],
+	"location": [
+	  [
+		{
+		  "param": "block",
+		  "operator": "==",
+		  "value": "acf/image-cta-dk"
+		}
+	  ]
+	],
+	"active": true
+  }

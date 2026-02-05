@@ -1,0 +1,47 @@
+{
+  "key": "group_final_words_dk",
+  "title": "Block: Final Words DK",
+  "fields": [
+    {
+      "key": "field_block_final_words_dk__headline",
+      "label": "Headline",
+      "name": "block_final_words_dk__headline",
+      "type": "text",
+      "instructions": "Main heading for the final section",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" }
+    },
+    {
+      "key": "field_block_final_words_dk__text",
+      "label": "Text",
+      "name": "block_final_words_dk__text",
+      "type": "wysiwyg",
+      "instructions": "Rich text paragraphs for your final message",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 0,
+      "delay": 0
+    },
+    {
+      "key": "field_block_final_words_dk__button_link",
+      "label": "Button",
+      "name": "block_final_words_dk__button_link",
+      "type": "link",
+      "instructions": "Call-to-action button text, URL and target",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" }
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/final-words-dk"
+      }
+    ]
+  ],
+  "active": true
+}

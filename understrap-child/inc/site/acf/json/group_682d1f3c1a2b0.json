@@ -1,0 +1,68 @@
+{
+  "key": "group_682d1f3c1a2b0",
+  "title": "Page: Contact Us",
+  "fields": [
+    {
+      "key": "field_682d1f3c1a2b1",
+      "label": "Form Title",
+      "name": "page_contact__form_title",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_682d1f3c1a2b2",
+      "label": "Form Shortcode",
+      "name": "page_contact__form_shortcode",
+      "type": "textarea",
+      "instructions": "Paste the form shortcode here (e.g. [gravityform id=\"1\"]).",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "rows": 4,
+      "new_lines": ""
+    },
+    {
+      "key": "field_682d1f3c1a2b3",
+      "label": "Map Title",
+      "name": "page_contact__map_title",
+      "type": "text",
+      "instructions": "Title displayed above the map placeholder.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-contact-us.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": ""
+}

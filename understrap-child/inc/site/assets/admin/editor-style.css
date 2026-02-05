@@ -1,0 +1,24 @@
+/* Main content column width */
+.wp-block {
+	max-width: 1440px; /* Adjust this value to your desired max width */
+	width: 90%; /* Optional: Adjust width relative to container */
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+	max-width: 1690px; /* Adjust for wide alignment */
+}
+
+/* Width of "full-width" blocks */
+.wp-block[data-align="full"] {
+	max-width: none; /* Allows full width blocks to span the entire editor width */
+}
+
+/* Width of "wide" blocks */
+.wp-block img.autoload_blocks_preview_image {
+	width: 100%;
+}
+
+.is-focus-mode .block-editor-block-list__block:not(.has-child-selected) {
+	opacity: .7;
+}

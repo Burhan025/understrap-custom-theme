@@ -1,0 +1,53 @@
+{
+  "key": "group_google_reviews_dk",
+  "title": "Block: Google Reviews DK",
+  "fields": [
+    {
+      "key": "field_block_google_reviews_dk__title",
+      "label": "Title",
+      "name": "block_google_reviews_dk__title",
+      "type": "text",
+      "instructions": "Main section heading",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" }
+    },
+    {
+      "key": "field_block_google_reviews_dk__subtitle",
+      "label": "Subtitle",
+      "name": "block_google_reviews_dk__subtitle",
+      "type": "text",
+      "instructions": "Sub‐heading or descriptive line under title.",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" }
+    },
+    {
+      "key": "field_block_google_reviews_dk__button_link",
+      "label": "Button",
+      "name": "block_google_reviews_dk__button_link",
+      "type": "link",
+      "instructions": "Link text and URL for the CTA button",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" }
+    },
+    {
+      "key": "field_block_google_reviews_dk__shortcode",
+      "label": "Plugin Shortcode",
+      "name": "block_google_reviews_dk__shortcode",
+      "type": "textarea",
+      "instructions": "Enter your Google Reviews plugin shortcode (e.g. `[your_reviews_shortcode]`).",
+      "required": 1,
+      "new_lines": "none",
+      "wrapper": { "width": "", "class": "", "id": "" }
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/google-reviews-dk"
+      }
+    ]
+  ],
+  "active": true
+}

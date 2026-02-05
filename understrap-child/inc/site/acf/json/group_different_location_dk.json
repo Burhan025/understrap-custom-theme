@@ -1,0 +1,24 @@
+{
+  "key": "group_different_location_dk",
+  "title": "Block: Different Location DK",
+  "fields": [
+    {
+      "key": "field_dldk_headline",
+      "label": "Headline",
+      "name": "block_different_location_dk__headline",
+      "type": "text",
+      "instructions": "Section title (e.g. View a Different Location)",
+      "required": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/different-location-dk"
+      }
+    ]
+  ],
+  "active": true
+}

@@ -1,0 +1,43 @@
+{
+	"key": "group_680b_blog_cards",
+	"title": "Blog Cards",
+	"fields": [
+	  {
+		"key": "field_680b_title",
+		"label": "Title",
+		"name": "title",
+		"aria-label": "",
+		"type": "text",
+		"instructions": "Enter the section heading (e.g., Our Blog)",
+		"required": 0,
+		"conditional_logic": 0,
+		"wrapper": {
+		  "width": "",
+		  "class": "",
+		  "id": ""
+		},
+		"default_value": "Our Blog",
+		"placeholder": "",
+		"prepend": "",
+		"append": ""
+	  }
+	],
+	"location": [
+	  [
+		{
+		  "param": "block",
+		  "operator": "==",
+		  "value": "acf/blog-cards"
+		}
+	  ]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0
+  }
